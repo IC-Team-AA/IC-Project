@@ -1,0 +1,288 @@
+:root {
+    --background_main_page: rgb(226, 226, 226);
+    --main_color: #009aad;
+
+    --top_forms_header: 16px;
+    --left_forms_header: 16px;
+    --top_forms_preheader: 50px;
+    --left_forms_preheader: 250px;
+    --top_forms_header_click: 10px;
+    --p_beet_clicks: 255px;
+
+    --top_lessons_title: 60px;
+    --top_lessons_text: 90px;
+
+    --top_ntf_text: 70px;
+    --left_ntf_text: 20px;
+
+    --font_size_lessons_title: 22px;
+    --font_size_lessons_text: 16px;
+    --font_size_ntf_text: 22px;
+
+    --top_records_video: 110px;
+    --left_records_video: 25px;
+    --top_records_title: 110px;
+    --top_records_text: 135px;
+    --top_records_date: 185px;
+    --left_records_title: 200px;
+    --font_size_records_title: 20px;
+    --font_size_records_text: 14px;
+    
+}
+
+#main_page {
+    flex: 1;
+    background-color: var(--background_main_page);
+    display: flex;
+}
+
+#main_content {
+    height: 87%;
+    width: 100%;
+    padding: 4%;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: var(--main_color);
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1.35fr;
+    grid-template-rows: 1.25fr 1fr 2fr;
+    gap: 4% 4%;
+    grid-auto-flow: row;
+    
+    grid-template-areas:
+        "progress progress ntf"
+        "lessons projects ntf"
+        "msg msg records"
+    
+    }
+
+#main_content > * {
+    background-position: none;
+    position: relative;
+    object-fit: inherit;
+    background-repeat: no-repeat;
+    background-color: rgb(255, 255, 255);
+}
+#main_content  * {
+    box-sizing: border-box;
+}
+#lessons_title{
+    position: absolute;
+    color:black;
+    font-size: var(--font_size_lessons_title);
+    width: 96%;
+    text-align: right;
+    text-decoration: underline;
+    top: var(--top_lessons_title);
+}
+#lessons_text{
+    position: absolute;
+    color:black;
+    font-size: var(--font_size_lessons_text);
+    width: 96%;
+    line-height: 1.3rem;
+    top: var(--top_lessons_text);
+    text-align: right;
+}
+#forms_preheader{
+    position: absolute;
+    font-size: 18px;
+    top: var(--top_forms_preheader);
+    left: var(--left_forms_preheader);
+}
+#forms_header{
+    position: absolute;
+    top: var(--top_forms_header_click);
+    left: var(--left_forms_header);
+}
+#forms_header_2_1{
+    position: absolute;
+    top: var(--top_forms_header_click);
+    left: calc(var(--left_forms_header) + 150px);
+}
+#forms_header_3{
+    position: absolute;
+    top: var(--top_forms_header_click);
+    left: calc(var(--left_forms_header) + var(--p_beet_clicks) * 2);
+}
+#forms_header_2{
+    position: absolute;
+    top: var(--top_forms_header_click);
+    left: calc(var(--left_forms_header) + var(--p_beet_clicks));
+}
+#ntf_text{
+    position: absolute;
+    color:black;
+    font-size: var(--font_size_ntf_text);
+    width: 90%;
+    font-weight: 600;
+    font-family: "Alegreya";
+    line-height: 1.5rem;
+    top: var(--top_ntf_text);
+    left: var(--left_ntf_text);
+}
+#records_video{
+    position: absolute;
+    top: var(--top_records_video);
+    left: var(--left_records_video);
+}
+#records_video2{
+    position: absolute;
+    top: calc(var(--top_records_video) + 110px);
+    left: var(--left_records_video);
+}
+#records_title{
+    position: absolute;
+    font-size: var(--font_size_records_title);
+    font-weight: 700;
+    color: black;
+    width: 50%;
+    text-align: left;
+    top: var(--top_records_title);
+    left: var(--left_records_title);
+}
+#records_text{
+    position: absolute;
+    font-size: var(--font_size_records_text);
+    font-weight: 600;
+    color: black;
+    width: 50%;
+    line-height: 1.2rem;
+    text-align: left;
+    top: var(--top_records_text);
+    left: var(--left_records_title);
+}
+#records_date{
+    position: absolute;
+    font-size: var(--font_size_records_text);
+    font-weight: 600;
+    color: black;
+    width: 50%;
+    text-align: left;
+    top: var(--top_records_date);
+    left: var(--left_records_title);
+}
+#records_title_2{
+    position: absolute;
+    font-size: var(--font_size_records_title);
+    font-weight: 700;
+    color: black;
+    width: 50%;
+    text-align: left;
+    top: calc(var(--top_records_title) + 110px);
+    left: var(--left_records_title);
+}
+#records_text_2{
+    position: absolute;
+    font-size: var(--font_size_records_text);
+    font-weight: 600;
+    color: black;
+    width: 50%;
+    line-height: 1.2rem;
+    text-align: left;
+    top: calc(var(--top_records_text) + 110px);
+    left: var(--left_records_title);
+}
+#records_date_2{
+    position: absolute;
+    font-size: var(--font_size_records_text);
+    font-weight: 600;
+    color: black;
+    width: 50%;
+    text-align: left;
+    top: calc(var(--top_records_date) + 110px);
+    left: var(--left_records_title);
+}
+
+#main_content > #ntf > img{ 
+    width: 100%;
+    height: 400px;
+}
+#main_content > #msg > img{ 
+    width: 100%;
+    height: 332px;
+}
+#main_content > #projects > img{ 
+    width: 100%;
+    height: 164px;
+}
+#main_content > #lessons > img{ 
+    width: 100%;
+    height: 164px;
+}
+#main_content > #records > #bg{ 
+    width: 100%;
+    height: 332px;
+}
+#msg {
+    grid-area: msg;
+}
+
+#progress {
+    grid-area: progress;
+}
+
+#ntf {
+    grid-area: ntf;
+}
+
+#lessons {
+   /* background-image: url('/static/img/form_lessons.svg');*/
+    grid-area: lessons;
+}
+
+#lessons_title_space{
+    position: absolute;
+    top: -2%;
+    left: 0%;
+    width: 102%;
+    height: 33%;
+    background-color: var(--background_main_page);
+    z-index: 2;
+}
+
+#lessons_title_big{
+    position: absolute;
+    top: 0%;
+    left: -2px;
+    width: 85%;
+    height: 33%;
+    background-color: black;
+    border-radius: 30px 50px 0px 0px;
+    z-index: 3;
+}
+
+
+#lessons_title_mini{
+    position: absolute;
+    top: 18%;
+    left: 2px;
+    width: 100%;
+    height: 15%;
+    background-color: black;
+    border-radius: 0% 7% 0% 0%;
+    z-index: 3; 
+}
+
+#lessons_title_right_space{
+    position: absolute;
+    top: 0%;
+    left: 79%;
+    width: 22%;
+    height: 25%;
+    background-color: var(--background_main_page);
+    border-radius: 0 0 0 50px;
+    z-index: 4; 
+}
+
+
+
+#projects {
+    grid-area: projects;
+}
+
+#records {
+    grid-area: records;
+}

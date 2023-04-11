@@ -1,0 +1,213 @@
+:root {
+    --main_color: #009aad;
+    --additional_color: white;
+    --background_menu_color: black;
+
+    --header_height: 65px;
+    --header_height_125: 68px;
+
+    --nav_width: 14%;
+    --nav_width_125: 210px;
+    --nav_menu_point_font_size: 19px;
+    --nav_menu_pont_font_size_125: 16px;
+
+    --IC_logo_width: 50px;
+    --IC_logo_height: 40px;
+    --IC_logo_width_125: 38px;
+    --IC_logo_height_125: 30px;
+    --IC_logo_ml: 23px;
+    --IC_logo_ml_125: 17px;
+
+    --IC_logo_title: 311px;
+    --IC_logo_title_font_size: 30px;
+    --IC_logo_title: 233px;
+    --IC_logo_title_fint_size_125: 23px;
+    --IC_logo_title_ml: 22px;
+    --IC_logo_title_ml_125: 16px;
+
+
+    --header_right_content_gap: 63px;
+    --header_right_content_gap_125: 47px;
+    --header_right_content_mr: 48px;
+    --header_right_content_mr_125: 36px;
+    --header_right_content_font_size: 20px;
+    --header_right_content_font_size_125: 15px;
+
+    --nav_menu_pont_mb: 10px;
+    --nav_menu_pont_mb_125: 7px;
+
+    --user_avatar_size: 100px;
+    --user_avatar_size_125: 75px;
+    --user_avatar_mt: 50px;
+    --user_avatar_mt_125: 38px;
+    --user_avatar_mb: 20px;
+    --user_avatar_mb_125: 15px;
+
+    --user_full_name_mb: 30px;
+    --user_full_name_mb_125: 23px;
+
+    --focus_point_size: 8px;
+    --focus_point_size_125: 6px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    overflow: hidden;
+}
+
+header {
+    height: var(--header_height);
+    width: 100vw;
+    background-color: var(--background_menu_color);
+    display: flex;
+    align-items: center;
+    border-bottom: var(--main_color) solid 3px;
+}
+
+#IC_logo {
+    border: 3px solid #009aad;
+    width: var(--IC_logo_width);
+    height: var(--IC_logo_height);
+    border-radius: 17px;
+    text-align: center;
+    margin-left: 23px;
+    display: table;
+    flex: initial;
+}
+
+#IC_logo_text {
+    display: table-cell;
+    vertical-align: middle;
+    color: var(--main_color);
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 31px;
+}
+
+#IC_title {
+    margin-left: var(--IC_logo_title_ml);
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 700;
+    font-size: var(--IC_logo_title_font_size);
+    line-height: 42px;
+    text-align: center;
+    color: var(--main_color);
+    flex: initial;
+}
+
+#header_right {
+    display: flex;
+    justify-content: right;
+    flex: 1;
+}
+
+#header_right_content {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--header_right_content_font_size);
+    line-height: 28px;
+    color: var(--additional_color);
+    margin-right: var(--header_right_content_mr);
+}
+
+#header_right_content a:first-child {
+    padding-right: var(--header_right_content_gap);
+}
+
+main {
+    display: flex;
+}
+
+nav {
+    background-color: black;
+    width: var(--nav_width);
+    height: calc(100vh - var(--header_height));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--additional_color);
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--nav_menu_point_font_size);
+    line-height: 44px;
+    flex: initial;
+}
+
+nav a {
+    margin-bottom: var(--nav_menu_pont_mb);
+    transition: color 1s ease-in-out;
+}
+
+nav a:hover {
+    color: var(--main_color);
+}
+
+#exit_link {
+    transition: color 1s ease-in-out;
+}
+
+#exit_link:hover {
+    color: rgb(173, 56, 56);
+}
+
+#user_avatar {
+    margin: var(--user_avatar_mt) auto var(--user_avatar_mb);
+    background-image: url("/static/img/user_avatar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    width: var(--user_avatar_size);
+    height: var(--user_avatar_size);
+}
+
+#user_full_name {
+    margin-bottom: var(--user_full_name_mb);
+}
+
+#focus_point {
+    position: relative;
+    background-color: var(--additional_color);
+    border-radius: 50%;
+    width: var(--focus_point_size);
+    height: var(--focus_point_size);
+    left: -3em;
+    top: 1.25em;
+}
+
+
+.flicker_light {
+    position: relative;
+    overflow: hidden;
+}
+
+.flicker_light::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -300%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent 0%, white 40%, white 60%, transparent 100%);
+    filter: blur(5px);
+    animation: slide 10s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% {
+        left: -300%;
+    }
+
+    100% {
+        left: 1000%;
+    }
+}
