@@ -55,28 +55,41 @@
                 <div id="progress">
                 </div>
                 <div id="lessons">
-                    <snap id="forms_header">Ближайшие уроки</snap>
-                    <snap id="lessons_title">Python 30 матра 14:30</snap>
-                    <snap id="lessons_text">web-дизайн 2 апреля<br>
+                    <snap class="absolute form_header">Ближайшие уроки</snap>
+                    <snap class="absolute form_text lessons_text" id="lessons_title">Python 30 матра 14:30</snap>
+                    <snap class="absolute form_text lessons_text" id="lessons_text">web-дизайн 2 апреля<br>
                                             C++ 2 апреля<br>
                                             JavaScript 4 апреля</snap>
                     <img src="/static/img/form_lessons.png">
 
                 </div>
                 <div id="projects">
-                    <snap id="forms_header">Ваши проекты</snap>
-                    <snap id="forms_header_2">Кодревью</snap>
-                   <img src="/static/img/form_projects.png">
+                    <snap class="absolute form_header">Ваши проекты</snap>
+                    <snap class="absolute form_header" id="forms_header_msg">Кодревью</snap>
+                    <div class="absolute projects_block">
+                        <img class="projects_photo" src="/static/img/projects/python.png">
+                        <snap class="form_text projects_text">path_creatop</snap>
+                        
+                    </div>
+                    <!--<snap class="absolute form_text projects_text" id="projects_text_2">matrix</snap>
+                    <img class="absolute projects_photo" id="projects_photo_2" src="/static/img/projects/js.png">
+                    <snap class="absolute form_text projects_text" id="projects_text_3">index</snap>
+                    <img class="absolute projects_photo" id="projects_photo_3" src="/static/img/projects/thml.png">
+                    <snap class="absolute form_text projects_text" id="projects_text_4">root_finder</snap>
+                    <img class="absolute projects_photo" id="projects_photo_4" src="/static/img/projects/python.png">
+                    <snap class="absolute form_text projects_text" id="projects_text_5">project_1</snap>
+                    <img class="absolute projects_photo" id="projects_photo_5" src="/static/img/projects/ruby.png">-->
+                    <img id="bg2" src="/static/img/form_projects.png">
                 </div>
                 <div id="msg">
-                    <snap id="forms_header">Одногруппники</snap>
-                    <snap id="forms_header_2">Преподаватели</snap>
-                    <snap id="forms_header_3">Поддержка</snap>
+                    <snap class="absolute form_header">Одногруппники</snap>
+                    <snap class="absolute form_header" id="forms_header_msg">Преподаватели</snap>
+                    <snap class="absolute form_header" id="forms_header_msg_2">Поддержка</snap>
                     <img src="/static/img/form_chats.png">
                 </div>
                 <div id="ntf">
-                    <snap id="forms_header">Уведомления</snap>
-                    <snap id="ntf_text">· &nbsp&nbspЗавтра дедлайн по проекту: ”Автоматизация СУБД”.<br><br>
+                    <snap class="absolute form_header">Уведомления</snap>
+                    <snap class="absolute form_text" id="ntf_text">· &nbsp&nbspЗавтра дедлайн по проекту: ”Автоматизация СУБД”.<br><br>
                         · &nbsp&nbspВам задано новое домашнее задание: “Разработка макета сайта продуктового магазина”.<br><br>
                         · &nbsp&nbspЧерез 4 дня кончается ваш абонимент по крсу “Python”.<br><br>
                         · &nbsp&nbspTomorrow is the deadline for the project: ”DBMS automation".
@@ -84,18 +97,18 @@
                     <img src="/static/img/form_ntf.jpg">
                 </div>
                 <div id="records">
-                    <snap id="forms_header">Записи</snap>
-                    <snap id="forms_header_2_1">Доп.материалы</snap>
-                    <snap id="forms_preheader">Описание</snap>
-                    <img src="/static/img/video1.jpg" id="records_video">
-                    <snap id="records_title">C++ урок 16</snap>
-                    <snap id="records_text">Разбор логических операторов в схемах.</snap>
-                    <span id="records_date">28.03.2023</span>
-                    <snap id="records_title_2">Python урок 21</snap>
-                    <snap id="records_text_2">Изучение модулей numpy и tkinter и их использование.</snap>
-                    <span id="records_date_2">28.03.2023</span>
-                    <img src="/static/img/video2.png" id="records_video2">
-                   <img src="/static/img/form_records.png" id="bg">
+                    <snap class="absolute form_header">Записи</snap>
+                    <snap class="absolute form_header" id="forms_header_records">Доп.материалы</snap>
+                    <snap class="absolute form_header" id="forms_preheader">Описание</snap>
+                    <snap class="absolute form_text records_description records_title">C++ урок 16</snap>
+                    <snap class="absolute form_text records_description records_text">Разбор логических операторов в схемах.</snap>
+                    <span class="absolute form_text records_description" id="records_date">28.03.2023</span>
+                    <snap class="absolute form_text records_description records_title" id="records_title_2">Python урок 21</snap>
+                    <snap class="absolute form_text records_description records_text" id="records_text_2">Изучение модулей numpy и tkinter и их использование.</snap>
+                    <span class="absolute form_text records_description" id="records_date_2">28.03.2023</span>
+                    <img class="absolute records_video" src="/static/img/video1.jpg">
+                    <img class="absolute records_video" src="/static/img/video2.png" id="records_video2">
+                   <img src="/static/img/form_records.png" id="bg1">
                 </div>
             </div>
         </section>
