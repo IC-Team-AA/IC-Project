@@ -1,12 +1,24 @@
 :root {
-    --background_main_page: rgb(226, 226, 226);
-    --main_color: #009aad;
 
-    --top_forms_header: 16px;
+    /*цвета*/
+    --background_main_page: rgb(226, 226, 226);
+    --header_color: #009aad;
+    --text_color: #000000;
+
+    /*размеры шрифтов*/
+    --header_font_size: 24px;
+    --font_size_ntf_text_and_lessons_title: calc(var(--header_font_size) * (11/12));
+    --font_size_records_title: calc(var(--header_font_size) * (10/12));
+    --preheader_font_size: calc(var(--header_font_size) * (9/12));
+    --text_font_size: calc(var(--header_font_size) * (8/12));
+    --font_size_records_text: calc(var(--header_font_size) * (7/12));
+    --projects_font_size: calc(var(--header_font_size) * (6/12));
+
+    /*Отспуты*/
+    --top_forms_header: 10px;
     --left_forms_header: 16px;
     --top_forms_preheader: 50px;
     --left_forms_preheader: 250px;
-    --top_forms_header_click: 10px;
     --p_beet_clicks: 255px;
 
     --top_lessons_title: 60px;
@@ -15,36 +27,47 @@
     --top_ntf_text: 70px;
     --left_ntf_text: 20px;
 
-    --font_size_lessons_title: 22px;
-    --font_size_lessons_text: 16px;
-    --font_size_ntf_text: 22px;
-
-    --top_records_video: 110px;
-    --left_records_video: 25px;
-    --top_records_title: 110px;
+    --top_records_video_and_title: 30%;
+    --left_records_video: 5%;
     --top_records_text: 135px;
     --top_records_date: 185px;
-    --left_records_title: 200px;
-    --font_size_records_title: 20px;
-    --font_size_records_text: 14px;
-    
-}
+    --left_records_description: 45%;
 
+    --top_projects_ptoho: 60px;
+    --left_projects_ptoho: 30px;
+    --top_projects_text: 135px;
+    --left_projects_text: 18px;
+}
+/*------------------Стили для текста на странице-----------------------------*/
+.absolute{
+    position: absolute;
+}
+.form_header{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--header_font_size);
+    color: var(--header_color);
+    top: var(--top_forms_header);
+    left: var(--left_forms_header);
+}
+.form_text{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: var(--text_font_size);
+    color: var(--text_color);
+}
+/*---------------------------------------------------------------------------*/
 #main_page {
     flex: 1;
     background-color: var(--background_main_page);
     display: flex;
 }
-
 #main_content {
     height: 87%;
     width: 100%;
     padding: 4%;
-    font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    color: var(--main_color);
     display: grid;
     grid-template-columns: 1fr 1.7fr 1.35fr;
     grid-template-rows: 1.25fr 1fr 2fr;
@@ -57,7 +80,6 @@
         "msg msg records"
     
     }
-
 #main_content > * {
     background-position: none;
     position: relative;
@@ -68,134 +90,131 @@
 #main_content  * {
     box-sizing: border-box;
 }
-#lessons_title{
-    position: absolute;
-    color:black;
-    font-size: var(--font_size_lessons_title);
+
+/*------------------Отступы для формы ближайшие уроки------------------------*/
+.lessons_text{
     width: 96%;
     text-align: right;
-    text-decoration: underline;
+}
+#lessons_title{
     top: var(--top_lessons_title);
+    font-size: var(--font_size_ntf_text_and_lessons_title);
+    text-decoration: underline;
 }
 #lessons_text{
-    position: absolute;
-    color:black;
-    font-size: var(--font_size_lessons_text);
-    width: 96%;
-    line-height: 1.3rem;
     top: var(--top_lessons_text);
-    text-align: right;
+    line-height: 1.3rem;
 }
+/*---------------------------------------------------------------------------*/
+
 #forms_preheader{
-    position: absolute;
-    font-size: 18px;
     top: var(--top_forms_preheader);
     left: var(--left_forms_preheader);
+    font-size: var(--preheader_font_size);
 }
-#forms_header{
-    position: absolute;
-    top: var(--top_forms_header_click);
-    left: var(--left_forms_header);
-}
-#forms_header_2_1{
-    position: absolute;
-    top: var(--top_forms_header_click);
+
+/*------------------Отступы для названий загаловков форм---------------------*/
+#forms_header_records{
     left: calc(var(--left_forms_header) + 150px);
 }
-#forms_header_3{
-    position: absolute;
-    top: var(--top_forms_header_click);
-    left: calc(var(--left_forms_header) + var(--p_beet_clicks) * 2);
-}
-#forms_header_2{
-    position: absolute;
-    top: var(--top_forms_header_click);
+#forms_header_msg{
     left: calc(var(--left_forms_header) + var(--p_beet_clicks));
 }
+#forms_header_msg_2{
+    left: calc(var(--left_forms_header) + var(--p_beet_clicks) * 2);
+}
+/*---------------------------------------------------------------------------*/
+
+/*------------------Отступы для формы уведомления----------------------------*/
 #ntf_text{
-    position: absolute;
-    color:black;
-    font-size: var(--font_size_ntf_text);
+    top: var(--top_ntf_text);
+    left: var(--left_ntf_text);
+    font-size: var(--font_size_ntf_text_and_lessons_title);
     width: 90%;
     font-weight: 600;
     font-family: "Alegreya";
     line-height: 1.5rem;
-    top: var(--top_ntf_text);
-    left: var(--left_ntf_text);
 }
-#records_video{
-    position: absolute;
-    top: var(--top_records_video);
+/*---------------------------------------------------------------------------*/
+
+/*------------------Отступы для формы запись занятий-------------------------*/
+.records_video{
+    top: var(--top_records_video_and_title);
     left: var(--left_records_video);
 }
 #records_video2{
-    position: absolute;
-    top: calc(var(--top_records_video) + 110px);
-    left: var(--left_records_video);
+    top: calc(var(--top_records_video_and_title) + 34%);
 }
-#records_title{
-    position: absolute;
+.records_description{
+    left: var(--left_records_description);
+    font-size: var(--font_size_records_text);
+    width: 50%;
+    text-align: left;
+    font-weight: 600;
+}
+.records_title{
     font-size: var(--font_size_records_title);
     font-weight: 700;
-    color: black;
-    width: 50%;
-    text-align: left;
-    top: var(--top_records_title);
-    left: var(--left_records_title);
-}
-#records_text{
-    position: absolute;
-    font-size: var(--font_size_records_text);
-    font-weight: 600;
-    color: black;
-    width: 50%;
-    line-height: 1.2rem;
-    text-align: left;
-    top: var(--top_records_text);
-    left: var(--left_records_title);
-}
-#records_date{
-    position: absolute;
-    font-size: var(--font_size_records_text);
-    font-weight: 600;
-    color: black;
-    width: 50%;
-    text-align: left;
-    top: var(--top_records_date);
-    left: var(--left_records_title);
+    top: var(--top_records_video_and_title);
 }
 #records_title_2{
-    position: absolute;
-    font-size: var(--font_size_records_title);
-    font-weight: 700;
-    color: black;
-    width: 50%;
-    text-align: left;
-    top: calc(var(--top_records_title) + 110px);
-    left: var(--left_records_title);
+    top: calc(var(--top_records_video_and_title) + 34%);
+}
+.records_text{
+    line-height: 1.2rem;
+    top: var(--top_records_text);
 }
 #records_text_2{
-    position: absolute;
-    font-size: var(--font_size_records_text);
-    font-weight: 600;
-    color: black;
-    width: 50%;
-    line-height: 1.2rem;
-    text-align: left;
-    top: calc(var(--top_records_text) + 110px);
-    left: var(--left_records_title);
+    top: calc(var(--top_records_text) + 34%);
+}
+#records_date{
+    top: var(--top_records_date);
 }
 #records_date_2{
-    position: absolute;
-    font-size: var(--font_size_records_text);
-    font-weight: 600;
-    color: black;
-    width: 50%;
-    text-align: left;
-    top: calc(var(--top_records_date) + 110px);
-    left: var(--left_records_title);
+    top: calc(var(--top_records_date) + 34%);
+}
+/*---------------------------------------------------------------------------*/
+
+/*------------------Отступы для формы ваши проекты---------------------------*/
+.projects_block{
+}
+.projects_photo{
+    top: var(--top_projects_ptoho);
+    left: var(--left_projects_ptoho);
+    width: 51px;
+    height: 68px;
+}
+.projects_text{
+    font-size: var(--projects_font_size);
+    top: var(--top_projects_text);
+    left: var(--left_projects_text);
+}
+#projects_photo_2{
+    left: calc(var(--left_projects_ptoho) + 20%);
+}
+#projects_text_2{
+    left: calc(var(--left_projects_text) + 20%);
+}
+#projects_photo_3{
+    left: calc(var(--left_projects_ptoho) + (20% * 2));
+}
+#projects_text_3{
+    left: calc(var(--left_projects_text) + (20% * 2));
+}
+#projects_photo_4{
+    left: calc(var(--left_projects_ptoho) + (20% * 3));
+}
+#projects_text_4{
+    left: calc(var(--left_projects_text) + (20% * 3));
+}
+#projects_photo_5{
+    left: calc(var(--left_projects_ptoho) + (20% * 4));
+}
+#projects_text_5{
+    left: calc(var(--left_projects_text) + (20% * 4));
 }
 
+/*---------------------------------------------------------------------------*/
 #main_content > #ntf > img{ 
     width: 100%;
     height: 400px;
@@ -204,18 +223,20 @@
     width: 100%;
     height: 332px;
 }
-#main_content > #projects > img{ 
-    width: 100%;
-    height: 164px;
-}
 #main_content > #lessons > img{ 
     width: 100%;
     height: 164px;
 }
-#main_content > #records > #bg{ 
+#bg1{ 
     width: 100%;
     height: 332px;
 }
+#bg2{ 
+    width: 100%;
+    height: 164px;
+}
+
+/*------------------Расположение блоков на сетке-----------------*/
 #msg {
     grid-area: msg;
 }
@@ -229,9 +250,9 @@
 }
 
 #lessons {
-   /* background-image: url('/static/img/form_lessons.svg');*/
     grid-area: lessons;
 }
+/*---------------------------------------------------------------*/
 
 #lessons_title_space{
     position: absolute;
@@ -254,7 +275,6 @@
     z-index: 3;
 }
 
-
 #lessons_title_mini{
     position: absolute;
     top: 18%;
@@ -276,8 +296,6 @@
     border-radius: 0 0 0 50px;
     z-index: 4; 
 }
-
-
 
 #projects {
     grid-area: projects;
