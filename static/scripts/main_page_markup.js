@@ -18,9 +18,7 @@ function setFormSize() {
 
 function setRelativeFont(elementID, relativeElementID, percent){
     let relativeElement = document.getElementById(relativeElementID);
-    console.log(relativeElement);
     const elements = document.querySelectorAll(elementID);
-    console.log(elements);
     elements.forEach(
         function (element) {
             element.style.fontSize = `${parseInt(Math.sqrt(relativeElement.offsetHeight**2 + relativeElement.offsetWidth**2)) * (percent/100)}px`;
@@ -32,6 +30,7 @@ window.onload = function () {
     setRelativeFont('#areas_progress > div', 'progress', 3);
     setRelativeFont('#point_progress > div', 'point_progress', 1.5);
     setRelativeFont('#progress > span', 'progress', 2);
+    setRelativeFont('#ntf > div', 'ntf', 4);
     setFormSize();
 }
 
@@ -39,6 +38,7 @@ window.onresize = function(){
     setRelativeFont('#areas_progress > div', 'progress', 3);
     setRelativeFont('#point_progress > div', 'point_progress', 1.5);
     setRelativeFont('#progress > span', 'progress', 2);
+    setRelativeFont('#ntf > #ntf_wrapper > #ntf_text', 'ntf', 4);
     setFormSize();
 }
 

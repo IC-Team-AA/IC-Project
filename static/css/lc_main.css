@@ -27,17 +27,17 @@
     --header_font_size: 24px;
 
     /*Отспуты*/
-    --top_forms_header: 10px;
-    --left_forms_header: 16px;
-    --top_forms_preheader: 50px;
-    --left_forms_preheader: 250px;
-    --p_beet_clicks: 255px;
+    --top_forms_header: 0.45em;
+    --left_forms_header: 0.7em;
+    --top_forms_preheader: 2.5em;
+    --left_forms_preheader: 60%;
+    --p_beet_clicks: 11.5em;
 
     --top_lessons_title: 60px;
     --top_lessons_text: 90px;
 
-    --top_ntf_text: 70px;
-    --left_ntf_text: 20px;
+    --top_ntf_text: 15%;
+    --left_ntf_text: 5%;
 
     --top_records_video_and_title: 30%;
     --left_records_video: 5%;
@@ -55,7 +55,7 @@
 }
 
 .form_header{
-    font-size: var(--header_font_size);
+    font-size: min(2.4vh, 3vw);
     color: var(--header_color);
     top: var(--top_forms_header);
     left: var(--left_forms_header);
@@ -140,14 +140,20 @@
 /*---------------------------------------------------------------------------*/
 
 /*------------------Отступы для формы уведомления----------------------------*/
+#ntf_wrapper{
+    width: 94%;
+    height: 85%;
+    bottom:0;
+    right: 0;
+}
 #ntf_text{
-    top: var(--top_ntf_text);
-    left: var(--left_ntf_text);
+    position: relative;
     font-size: var(--font_size_ntf_text_and_lessons_title);
-    width: 90%;
+    width: 95%;
+    padding-bottom: 5%;
     font-weight: 600;
     font-family: "Alegreya";
-    line-height: 1.5rem;
+    line-height: 1.05em;
 }
 /*---------------------------------------------------------------------------*/
 
@@ -190,19 +196,22 @@
 /*---------------------------------------------------------------------------*/
 
 /*------------------Отступы для формы ваши проекты---------------------------*/
-#projects{
+#projects_wrapper{
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
     display: flex;
-    justify-content: center;
+    z-index: 1;
 }
 .projects_block{
-    z-index: 1;
-    padding-top: 11%;
+    padding-top: 10.5%;
     width: 18%;
     text-align: center;
 }
 .projects_photo{
-    width: 51px;
-    height: 68px;
+    width: 45%;
+    height: 60%;
+    object-fit: 100% auto;
 }
 .projects_text{
     font-size: var(--projects_font_size);
