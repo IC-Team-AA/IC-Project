@@ -1,18 +1,30 @@
 :root {
 
     /*цвета*/
-    --background_main_page: rgb(226, 226, 226);
+    --background_main_page: #e2e2e2;
+    --text_color: #000;
     --header_color: #009aad;
-    --text_color: #000000;
+    
+    --color_progress_left_coef_red: 0;
+    --color_progress_left_coef_green: 154;
+    --color_progress_left_coef_blue: 173;
+
+    --color_progress_right_coef_red: 255;
+    --color_progress_right_coef_green: 255;
+    --color_progress_right_coef_blue: 255;
+
+    --difference_red: calc((var(--color_progress_left_coef_red) - var(--color_progress_right_coef_red)) / 3);
+    --difference_green: calc((var(--color_progress_left_coef_green) - var(--color_progress_right_coef_green)) / 3);
+    --difference_blue: calc((var(--color_progress_left_coef_blue) - var(--color_progress_right_coef_blue)) / 3);
 
     /*размеры шрифтов*/
     --header_font_size: 24px;
-    --font_size_ntf_text_and_lessons_title: calc(var(--header_font_size) * (11/12));
-    --font_size_records_title: calc(var(--header_font_size) * (10/12));
-    --preheader_font_size: calc(var(--header_font_size) * (9/12));
-    --text_font_size: calc(var(--header_font_size) * (8/12));
-    --font_size_records_text: calc(var(--header_font_size) * (7/12));
-    --projects_font_size: calc(var(--header_font_size) * (6/12));
+    --font_size_ntf_text_and_lessons_title: 11/12em;
+    --font_size_records_title: 10/12em;
+    --preheader_font_size: 9/12em;
+    --text_font_size: 8/12em;
+    --font_size_records_text: 7/12em;
+    --projects_font_size: 6/12em;
 
     /*Отспуты*/
     --top_forms_header: 10px;
@@ -41,24 +53,26 @@
 .absolute{
     position: absolute;
 }
+
 .form_header{
-    z-index: 1;
-    font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 400;
     font-size: var(--header_font_size);
     color: var(--header_color);
     top: var(--top_forms_header);
     left: var(--left_forms_header);
 }
 .form_text{
+    font-size: var(--text_font_size);
+    color: var(--text_color);
+}
+
+.form_header,
+.form_text{
     z-index: 1;
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    font-size: var(--text_font_size);
-    color: var(--text_color);
 }
+
 /*---------------------------------------------------------------------------*/
 #main_page {
     flex: 1;
@@ -86,22 +100,21 @@
     position: relative;
     object-fit: inherit;
     background-repeat: no-repeat;
-    background-color: rgb(255, 255, 255);
 }
-#main_content  * {
-    box-sizing: border-box;
-}
+
 
 /*------------------Отступы для формы ближайшие уроки------------------------*/
 .lessons_text{
     width: 96%;
     text-align: right;
 }
+
 #lessons_title{
     top: var(--top_lessons_title);
     font-size: var(--font_size_ntf_text_and_lessons_title);
     text-decoration: underline;
 }
+
 #lessons_text{
     top: var(--top_lessons_text);
     line-height: 1.3rem;
@@ -287,4 +300,75 @@
 
 #records {
     grid-area: records;
+}
+
+#progress{
+    background-image: url('/static/img/progess_background.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 30px;    
+    position: relative;
+}
+
+#progress_main_title{
+    position: absolute;
+}
+
+#areas_progress{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+
+}
+
+#areas_progress > div{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    font-size: 2em;
+}
+
+
+#attendance_progress,
+#attendance_progress_title{
+    color: rgb(var(--color_progress_left_coef_red), var(--color_progress_left_coef_green), var(--color_progress_left_coef_blue));
+}
+
+#protected_projects_progress,
+#protected_projects_progress_title{
+    color: rgb(
+        calc(
+            var(--color_progress_left_coef_red) - var(--difference_red)
+        ),
+        calc(
+            var(--color_progress_left_coef_green) - var(--difference_green)
+        ),
+        calc(
+            var(--color_progress_left_coef_blue) - var(--difference_blue)
+        )
+    );
+}
+
+#failed_deadlines_progress,
+#failed_deadlines_progress_title{
+    color: rgb(
+        calc(
+            var(--color_progress_left_coef_red) - var(--difference_red) * 2
+        ),
+        calc(
+            var(--color_progress_left_coef_green) - var(--difference_green) * 2
+        ),
+        calc(
+            var(--color_progress_left_coef_blue) - var(--difference_blue) * 2
+        )
+    );
+}
+
+#mark_progress,
+#mark_progress_title{
+    color: rgb(var(--color_progress_right_coef_red), var(--color_progress_right_coef_green), var(--color_progress_right_coef_blue));
 }
