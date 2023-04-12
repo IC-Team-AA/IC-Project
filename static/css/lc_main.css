@@ -18,13 +18,13 @@
     --difference_blue: calc((var(--color_progress_left_coef_blue) - var(--color_progress_right_coef_blue)) / 3);
 
     /*размеры шрифтов*/
+    --projects_font_size: 12px;
+    --font_size_records_text: 14px;
+    --text_font_size: 16px;
+    --preheader_font_size: 18px;
+    --font_size_records_title: 20px;
+    --font_size_ntf_text_and_lessons_title: 22px;
     --header_font_size: 24px;
-    --font_size_ntf_text_and_lessons_title: 11/12em;
-    --font_size_records_title: 10/12em;
-    --preheader_font_size: 9/12em;
-    --text_font_size: 8/12em;
-    --font_size_records_text: 7/12em;
-    --projects_font_size: 6/12em;
 
     /*Отспуты*/
     --top_forms_header: 10px;
@@ -313,6 +313,16 @@
 
 #progress_main_title{
     position: absolute;
+    top: 4%;
+    left: 15%;
+    background: linear-gradient(45deg, #009AAD 33%, #2AABBA 66%, #55BCC8);
+}
+
+#result_progress{
+    position: absolute;
+    top: 87%;
+    left: 37%;
+    background: linear-gradient(45deg, #55BCC8 33%, #AADEE3 66%, #ffffff);
 }
 
 #areas_progress{
@@ -325,6 +335,9 @@
 }
 
 #areas_progress > div{
+    position: relative;
+    width: 2em;
+    text-align: center;
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 700;
@@ -336,6 +349,17 @@
 #attendance_progress,
 #attendance_progress_title{
     color: rgb(var(--color_progress_left_coef_red), var(--color_progress_left_coef_green), var(--color_progress_left_coef_blue));
+}
+#areas_progress > *::after{
+    content: "";
+    position: absolute;
+    top: -1.8em;
+    left: -1em;
+    border-radius: 50%;
+    border-width: 2px;
+    width: 4em;
+    height: 4em;
+    border-style: solid;
 }
 
 #protected_projects_progress,
@@ -371,4 +395,52 @@
 #mark_progress,
 #mark_progress_title{
     color: rgb(var(--color_progress_right_coef_red), var(--color_progress_right_coef_green), var(--color_progress_right_coef_blue));
+}
+
+.point_progress{
+    position: absolute;
+    top: 65%;
+    left: 0px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+}
+.point_progress > * > span{
+    position: absolute;
+    z-index: 1;
+}
+.point_progress > *{
+    width: 25%;
+    height: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.point_progress > *::before{
+    position: absolute;
+    left: 15%;
+    content: "";
+    z-index: 0;
+    background-color: black;
+    width: 70%;
+    height: 140%;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#main_content > div {
+    position: relative;
+}
+#main_content > div:not(#progress) > *{
+    position: absolute;
+}
+
+#progress > span{
+    font-weight: 700;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
