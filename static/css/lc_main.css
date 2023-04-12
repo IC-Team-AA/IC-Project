@@ -18,13 +18,13 @@
     --difference_blue: calc((var(--color_progress_left_coef_blue) - var(--color_progress_right_coef_blue)) / 3);
 
     /*размеры шрифтов*/
+    --projects_font_size: 12px;
+    --font_size_records_text: 14px;
+    --text_font_size: 16px;
+    --preheader_font_size: 18px;
+    --font_size_records_title: 20px;
+    --font_size_ntf_text_and_lessons_title: 22px;
     --header_font_size: 24px;
-    --font_size_ntf_text_and_lessons_title: 11/12em;
-    --font_size_records_title: 10/12em;
-    --preheader_font_size: 9/12em;
-    --text_font_size: 8/12em;
-    --font_size_records_text: 7/12em;
-    --projects_font_size: 6/12em;
 
     /*Отспуты*/
     --top_forms_header: 10px;
@@ -325,6 +325,9 @@
 }
 
 #areas_progress > div{
+    position: relative;
+    width: 2em;
+    text-align: center;
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 700;
@@ -336,6 +339,17 @@
 #attendance_progress,
 #attendance_progress_title{
     color: rgb(var(--color_progress_left_coef_red), var(--color_progress_left_coef_green), var(--color_progress_left_coef_blue));
+}
+#areas_progress > *::after{
+    content: "";
+    position: absolute;
+    top: -2em;
+    left: -1.3em;
+    border-radius: 50%;
+    border-width: 2px;
+    width: 4.5em;
+    height: 4.5em;
+    border-style: solid;
 }
 
 #protected_projects_progress,
