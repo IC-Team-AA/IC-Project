@@ -18,7 +18,7 @@
     --difference_blue: calc((var(--color_progress_left_coef_blue) - var(--color_progress_right_coef_blue)) / 3);
 
     /*размеры шрифтов*/
-    --projects_font_size: 12px;
+    --projects_font_size: min(12px, 1vw, 2vh);
     --font_size_records_text: 14px;
     --text_font_size: 16px;
     --preheader_font_size: 18px;
@@ -50,35 +50,35 @@
     --left_projects_text: 18px;
 }
 /*------------------Стили для текста на странице-----------------------------*/
-.absolute{
-    position: absolute;
+.absolute {
+    position: absolute
 }
 
-.form_header{
-    font-size: min(2.4vh, 3vw);
+.form_header {
+    font-size: min(2.4vh,3vw);
     color: var(--header_color);
     top: var(--top_forms_header);
-    left: var(--left_forms_header);
+    left: var(--left_forms_header)
 }
-.form_text{
+
+.form_text {
     font-size: var(--text_font_size);
-    color: var(--text_color);
+    color: var(--text_color)
 }
 
-.form_header,
-.form_text{
+.form_header,.form_text {
     z-index: 1;
-    font-family: 'Comfortaa';
+    font-family: "Comfortaa";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400
 }
 
-/*---------------------------------------------------------------------------*/
 #main_page {
     flex: 1;
     background-color: var(--background_main_page);
-    display: flex;
+    display: flex
 }
+
 #main_content {
     height: 87%;
     width: 100%;
@@ -88,368 +88,330 @@
     grid-template-rows: 1.25fr 1fr 2fr;
     gap: 4% 4%;
     grid-auto-flow: row;
-    
-    grid-template-areas:
-        "progress progress ntf"
-        "lessons projects ntf"
-        "msg msg records"
-    
-    }
-#main_content > * {
+    grid-template-areas: "progress progress ntf""lessons projects ntf""msg msg records"
+}
+
+#main_content>* {
     background-position: none;
     position: relative;
     object-fit: inherit;
     background-repeat: no-repeat;
 }
 
-
-/*------------------Отступы для формы ближайшие уроки------------------------*/
-.lessons_text{
+.lessons_text {
     width: 96%;
-    text-align: right;
+    text-align: right
 }
 
-#lessons_title{
+#lessons_title {
     top: var(--top_lessons_title);
     font-size: var(--font_size_ntf_text_and_lessons_title);
-    text-decoration: underline;
+    text-decoration: underline
 }
 
-#lessons_text{
+#lessons_text {
     top: var(--top_lessons_text);
-    line-height: 1.3rem;
+    line-height: 1.3rem
 }
-/*---------------------------------------------------------------------------*/
 
-#forms_preheader{
+#forms_preheader {
     top: var(--top_forms_preheader);
     left: var(--left_forms_preheader);
-    font-size: var(--preheader_font_size);
+    font-size: var(--preheader_font_size)
 }
 
-/*------------------Отступы для названий загаловков форм---------------------*/
-#forms_header_records{
-    left: calc(var(--left_forms_header) + 150px);
+#forms_header_records {
+    left: calc(var(--left_forms_header) + 150px)
 }
-#forms_header_msg{
-    left: calc(var(--left_forms_header) + var(--p_beet_clicks));
-}
-#forms_header_msg_2{
-    left: calc(var(--left_forms_header) + var(--p_beet_clicks) * 2);
-}
-/*---------------------------------------------------------------------------*/
 
-/*------------------Отступы для формы уведомления----------------------------*/
-#ntf_wrapper{
+#forms_header_msg {
+    left: calc(var(--left_forms_header) + var(--p_beet_clicks))
+}
+
+#forms_header_msg_2 {
+    left: calc(var(--left_forms_header) + var(--p_beet_clicks)*2)
+}
+
+#ntf_wrapper {
     width: 94%;
     height: 85%;
-    bottom:0;
-    right: 0;
+    bottom: 0;
+    right: 0
 }
-#ntf_text{
+
+#ntf_text {
     position: relative;
     font-size: var(--font_size_ntf_text_and_lessons_title);
     width: 95%;
     padding-bottom: 5%;
     font-weight: 600;
     font-family: "Alegreya";
-    line-height: 1.05em;
+    line-height: 1.05em
 }
-/*---------------------------------------------------------------------------*/
 
-/*------------------Отступы для формы запись занятий-------------------------*/
-.records_video{
+.records_video {
     top: var(--top_records_video_and_title);
-    left: var(--left_records_video);
+    left: var(--left_records_video)
 }
-#records_video2{
-    top: calc(var(--top_records_video_and_title) + 34%);
+
+#records_title_2,#records_video2 {
+    top: calc(var(--top_records_video_and_title) + 34%)
 }
-.records_description{
+
+.records_description {
     left: var(--left_records_description);
     font-size: var(--font_size_records_text);
     width: 50%;
     text-align: left;
-    font-weight: 600;
+    font-weight: 600
 }
-.records_title{
+
+.records_title {
     font-size: var(--font_size_records_title);
     font-weight: 700;
-    top: var(--top_records_video_and_title);
+    top: var(--top_records_video_and_title)
 }
-#records_title_2{
-    top: calc(var(--top_records_video_and_title) + 34%);
-}
-.records_text{
-    line-height: 1.2rem;
-    top: var(--top_records_text);
-}
-#records_text_2{
-    top: calc(var(--top_records_text) + 34%);
-}
-#records_date{
-    top: var(--top_records_date);
-}
-#records_date_2{
-    top: calc(var(--top_records_date) + 34%);
-}
-/*---------------------------------------------------------------------------*/
 
-/*------------------Отступы для формы ваши проекты---------------------------*/
-#projects_wrapper{
+.records_text {
+    line-height: 1.2rem;
+    top: var(--top_records_text)
+}
+
+#records_text_2 {
+    top: calc(var(--top_records_text) + 34%)
+}
+
+#records_date {
+    top: var(--top_records_date)
+}
+
+#records_date_2 {
+    top: calc(var(--top_records_date) + 34%)
+}
+
+#projects_wrapper {
     width: 100%;
     height: 100%;
     justify-content: space-around;
     display: flex;
-    z-index: 1;
+    z-index: 1
 }
-.projects_block{
-    padding-top: 10.5%;
+
+.projects_block {
+    padding-top: 6.5vh;
     width: 18%;
-    text-align: center;
+    text-align: center
 }
-.projects_photo{
-    width: 45%;
-    height: 60%;
-    object-fit: 100% auto;
+
+
+.projects_photo {
+    width: min(40px, 4vw);
+    height: min(60px, 6.5vh);
+    object-fit: contain
 }
-.projects_text{
+
+.projects_text {
     font-size: var(--projects_font_size);
-    padding-top: 5px;
+    padding-top: 0.5vh
 }
 
-/*---------------------------------------------------------------------------*/
-#main_content > #ntf > img{ 
+#main_content>#ntf>img {
     width: 100%;
-    height: 400px;
+    height: 400px
 }
-#main_content > #msg > img{ 
+
+#bg1,#main_content>#msg>img {
     width: 100%;
-    height: 332px;
+    height: 332px
 }
-#main_content > #lessons > img{ 
+
+#bg2,#main_content>#lessons>img {
     width: 100%;
-    height: 164px;
+    height: 164px
 }
-#bg1{ 
-    width: 100%;
-    height: 332px;
-}
-#bg2{
+
+#bg2 {
     position: absolute;
-    width: 100%;
-    height: 164px;
-    z-index: 0;
+    z-index: 0
 }
 
-/*------------------Расположение блоков на сетке-----------------*/
 #msg {
-    grid-area: msg;
+    grid-area: msg
 }
 
 #progress {
-    grid-area: progress;
+    grid-area: progress
 }
 
 #ntf {
-    grid-area: ntf;
+    grid-area: ntf
 }
 
 #lessons {
-    grid-area: lessons;
+    grid-area: lessons
 }
-/*---------------------------------------------------------------*/
 
-#lessons_title_space{
+#lessons_title_space {
     position: absolute;
     top: -2%;
-    left: 0%;
+    left: 0;
     width: 102%;
     height: 33%;
     background-color: var(--background_main_page);
-    z-index: 2;
+    z-index: 2
 }
 
-#lessons_title_big{
+#lessons_title_big,#lessons_title_mini {
     position: absolute;
-    top: 0%;
+    top: 0;
     left: -2px;
     width: 85%;
     height: 33%;
-    background-color: black;
-    border-radius: 30px 50px 0px 0px;
-    z-index: 3;
+    background-color: #000;
+    border-radius: 30px 50px 0 0;
+    z-index: 3
 }
 
-#lessons_title_mini{
-    position: absolute;
+#lessons_title_mini {
     top: 18%;
     left: 2px;
     width: 100%;
     height: 15%;
-    background-color: black;
-    border-radius: 0% 7% 0% 0%;
-    z-index: 3; 
+    border-radius: 0 7%0 0
 }
 
-#lessons_title_right_space{
+#lessons_title_right_space {
     position: absolute;
-    top: 0%;
+    top: 0;
     left: 79%;
     width: 22%;
     height: 25%;
     background-color: var(--background_main_page);
     border-radius: 0 0 0 50px;
-    z-index: 4; 
+    z-index: 4
 }
 
 #projects {
-    grid-area: projects;
+    grid-area: projects
 }
 
 #records {
-    grid-area: records;
+    grid-area: records
 }
 
-#progress{
-    background-image: url('/static/img/progess_background.png');
+#progress {
+    background-image: url(/static/img/progess_background.png);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    border-radius: 30px;    
-    position: relative;
+    border-radius: 30px;
+    position: relative
 }
 
-#progress_main_title{
+#progress_main_title {
     position: absolute;
     top: 4%;
     left: 15%;
-    background: linear-gradient(45deg, #009AAD 33%, #2AABBA 66%, #55BCC8);
+    background: linear-gradient(45deg,#009aad 33%,#2aabba 66%,#55bcc8)
 }
 
-#result_progress{
+#result_progress {
     position: absolute;
     top: 87%;
     left: 37%;
-    background: linear-gradient(45deg, #55BCC8 33%, #AADEE3 66%, #ffffff);
+    background: linear-gradient(45deg,#55bcc8 33%,#aadee3 66%,#fff)
 }
 
-#areas_progress{
+#areas_progress,.point_progress {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: space-around;
-    align-items:center;
-
+    align-items: center
 }
 
-#areas_progress > div{
+#areas_progress>div {
     position: relative;
     width: 2em;
     text-align: center;
-    font-family: 'Comfortaa';
+    font-family: "Comfortaa";
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
-    font-size: 2em;
+    font-size: 2em
 }
 
-
-#attendance_progress,
-#attendance_progress_title{
-    color: rgb(var(--color_progress_left_coef_red), var(--color_progress_left_coef_green), var(--color_progress_left_coef_blue));
+#attendance_progress,#attendance_progress_title {
+    color: rgb(var(--color_progress_left_coef_red),var(--color_progress_left_coef_green),var(--color_progress_left_coef_blue))
 }
-#areas_progress > *::after{
-    content: "";
+
+#areas_progress>::after,.point_progress>::before {
     position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 2px
+}
+
+#areas_progress>::after {
     top: -1.8em;
     left: -1em;
     border-radius: 50%;
-    border-width: 2px;
     width: 4em;
-    height: 4em;
-    border-style: solid;
+    height: 4em
 }
 
-#protected_projects_progress,
-#protected_projects_progress_title{
-    color: rgb(
-        calc(
-            var(--color_progress_left_coef_red) - var(--difference_red)
-        ),
-        calc(
-            var(--color_progress_left_coef_green) - var(--difference_green)
-        ),
-        calc(
-            var(--color_progress_left_coef_blue) - var(--difference_blue)
-        )
-    );
+#protected_projects_progress,#protected_projects_progress_title {
+    color: rgb(calc(var(--color_progress_left_coef_red) - var(--difference_red)),calc(var(--color_progress_left_coef_green) - var(--difference_green)),calc(var(--color_progress_left_coef_blue) - var(--difference_blue)))
 }
 
-#failed_deadlines_progress,
-#failed_deadlines_progress_title{
-    color: rgb(
-        calc(
-            var(--color_progress_left_coef_red) - var(--difference_red) * 2
-        ),
-        calc(
-            var(--color_progress_left_coef_green) - var(--difference_green) * 2
-        ),
-        calc(
-            var(--color_progress_left_coef_blue) - var(--difference_blue) * 2
-        )
-    );
+#failed_deadlines_progress,#failed_deadlines_progress_title {
+    color: rgb(calc(var(--color_progress_left_coef_red) - var(--difference_red)*2),calc(var(--color_progress_left_coef_green) - var(--difference_green)*2),calc(var(--color_progress_left_coef_blue) - var(--difference_blue)*2))
 }
 
-#mark_progress,
-#mark_progress_title{
-    color: rgb(var(--color_progress_right_coef_red), var(--color_progress_right_coef_green), var(--color_progress_right_coef_blue));
+#mark_progress,#mark_progress_title {
+    color: rgb(var(--color_progress_right_coef_red),var(--color_progress_right_coef_green),var(--color_progress_right_coef_blue))
 }
 
-.point_progress{
+.point_progress {
     position: absolute;
     top: 65%;
-    left: 0px;
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: space-around;
-    align-items:center;
+    left: 0;
+    height: 20%
 }
-.point_progress > * > span{
+
+.point_progress>*>span {
     position: absolute;
-    z-index: 1;
+    z-index: 1
 }
-.point_progress > *{
+
+.point_progress>* {
     width: 25%;
     height: 50%;
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
-.point_progress > *::before{
-    position: absolute;
+
+.point_progress>::before {
     left: 15%;
-    content: "";
     z-index: 0;
-    background-color: black;
+    background-color: #000;
     width: 70%;
     height: 140%;
-    border-radius: 8px;
-    border-style: solid;
-    border-width: 2px;
+    border-radius: 8px
 }
 
-#main_content > div {
-    position: relative;
-}
-#main_content > div:not(#progress) > *{
-    position: absolute;
+#main_content>div {
+    position: relative
 }
 
-#progress > span{
+#main_content>div:not(#progress)>* {
+    position: absolute
+}
+
+#progress>span {
     font-weight: 700;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent
 }
