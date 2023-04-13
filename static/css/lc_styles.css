@@ -50,13 +50,23 @@
     --focus_point_size_125: 6px;
 }
 
+@keyframes slide {
+    0% {
+        left: -300%
+    }
+
+    to {
+        left: 1000%
+    }
+}
+
 a {
     text-decoration: none;
-    color: inherit;
+    color: inherit
 }
 
 body {
-    overflow: hidden;
+    overflow: hidden
 }
 
 header {
@@ -65,7 +75,7 @@ header {
     background-color: var(--background_menu_color);
     display: flex;
     align-items: center;
-    border-bottom: var(--main_color) solid 3px;
+    border-bottom: var(--main_color) solid 3px
 }
 
 #IC_logo {
@@ -76,102 +86,99 @@ header {
     text-align: center;
     margin-left: 23px;
     display: table;
-    flex: initial;
+    flex: initial
+}
+
+#IC_logo_text,#IC_title {
+    font-family: "Inconsolata";
+    font-style: normal;
+    font-weight: 700;
+    color: var(--main_color)
 }
 
 #IC_logo_text {
     display: table-cell;
     vertical-align: middle;
-    color: var(--main_color);
-    font-family: 'Inconsolata';
-    font-style: normal;
-    font-weight: 700;
     font-size: 30px;
-    line-height: 31px;
+    line-height: 31px
 }
 
 #IC_title {
     margin-left: var(--IC_logo_title_ml);
-    font-family: 'Inconsolata';
-    font-style: normal;
-    font-weight: 700;
     font-size: var(--IC_logo_title_font_size);
     line-height: 42px;
     text-align: center;
-    color: var(--main_color);
-    flex: initial;
+    flex: initial
 }
 
 #header_right {
     display: flex;
     justify-content: right;
-    flex: 1;
+    flex: 1
 }
 
 #header_right_content {
-    font-family: 'Comfortaa';
+    font-family: "Comfortaa";
     font-style: normal;
     font-weight: 400;
     font-size: var(--header_right_content_font_size);
     line-height: 28px;
     color: var(--additional_color);
-    margin-right: var(--header_right_content_mr);
+    margin-right: var(--header_right_content_mr)
 }
 
 #header_right_content a:first-child {
-    padding-right: var(--header_right_content_gap);
+    padding-right: var(--header_right_content_gap)
 }
 
-main {
-    display: flex;
+main,nav {
+    display: flex
 }
 
 nav {
-    background-color: black;
+    background-color: #000;
     width: var(--nav_width);
     height: calc(100vh - var(--header_height));
-    display: flex;
     flex-direction: column;
     align-items: center;
     color: var(--additional_color);
-    font-family: 'Comfortaa';
+    font-family: "Comfortaa";
     font-style: normal;
     font-weight: 400;
     font-size: var(--nav_menu_point_font_size);
     line-height: 44px;
-    flex: initial;
+    flex: initial
 }
 
 nav a {
-    margin-bottom: var(--nav_menu_pont_mb);
-    transition: color 1s ease-in-out;
+    margin-bottom: var(--nav_menu_pont_mb)
 }
 
 nav a:hover {
-    color: var(--main_color);
+    color: var(--main_color)
 }
 
-#exit_link {
-    transition: color 1s ease-in-out;
+#exit_link,nav a {
+    transition: color 1s ease-in-out
 }
 
 #exit_link:hover {
-    color: rgb(173, 56, 56);
+    color: #ad3838
 }
 
 #user_avatar {
     margin: var(--user_avatar_mt) auto var(--user_avatar_mb);
-    background-image: url("/static/img/user_avatar.jpg");
+    background-image: url(/static/img/user_avatar.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
     border-radius: 50%;
     width: var(--user_avatar_size);
-    height: var(--user_avatar_size);
+    height: var(--user_avatar_size)
 }
 
 #user_full_name {
-    margin-bottom: var(--user_full_name_mb);
+    margin-bottom: var(--user_full_name_mb)
 }
 
 #focus_point {
@@ -181,13 +188,12 @@ nav a:hover {
     width: var(--focus_point_size);
     height: var(--focus_point_size);
     left: -3em;
-    top: 1.25em;
+    top: 1.25em
 }
-
 
 .flicker_light {
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
 .flicker_light::before {
@@ -197,17 +203,7 @@ nav a:hover {
     left: -300%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(100deg, transparent 0%, white 40%, white 60%, transparent 100%);
+    background: linear-gradient(100deg,transparent 0,#fff 40%,#fff 60%,transparent 100%);
     filter: blur(5px);
-    animation: slide 10s ease-in-out infinite;
-}
-
-@keyframes slide {
-    0% {
-        left: -300%;
-    }
-
-    100% {
-        left: 1000%;
-    }
+    animation: slide 10s ease-in-out infinite
 }
