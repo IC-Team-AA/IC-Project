@@ -27,7 +27,7 @@
     --header_font_size: 24px;
 
     /*Отспуты*/
-    --top_forms_header: 0.45em;
+    --top_forms_header: 3%;
     --left_forms_header: 0.7em;
     --top_forms_preheader: 2.5em;
     --left_forms_preheader: 60%;
@@ -61,12 +61,33 @@
     left: var(--left_forms_header)
 }
 
+.msg_header{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.form_header_lessons{
+    font-size: min(2.4vh,1.4vw);
+    color: var(--header_color);
+    top: 7%;
+    left: 3%;
+}
+
+.form_header_msg{
+    font-size: min(2.4vh,1.4vw);
+    color: var(--header_color);
+    width: 25%;
+    padding-left: 1.5%;
+}
+
 .form_text {
     font-size: var(--text_font_size);
     color: var(--text_color)
 }
 
-.form_header,.form_text {
+.form_header_lessons,.form_text, .form_header, .form_header_msg {
     z-index: 1;
     font-family: "Comfortaa";
     font-style: normal;
@@ -122,14 +143,6 @@
 
 #forms_header_records {
     left: calc(var(--left_forms_header) + 150px)
-}
-
-#forms_header_msg {
-    left: calc(var(--left_forms_header) + var(--p_beet_clicks))
-}
-
-#forms_header_msg_2 {
-    left: calc(var(--left_forms_header) + var(--p_beet_clicks)*2)
 }
 
 #ntf_wrapper {
