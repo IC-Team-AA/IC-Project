@@ -410,6 +410,94 @@
     position: absolute
 }
 
+#friends_block{
+    width: 100%;
+    height: 30vh;
+    top: 11%;
+}
+
+#friends_block > *{
+    position:static;
+    box-sizing: border-box;
+}
+
+#friends_block_title{  
+    width: 50%;
+    height: 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2.5% 1em 2.5%;
+    border: #000 1px solid;
+
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--header_color);
+}
+
+#friends_logo{
+    width: 2.5vh;
+    height: 2.5vh;
+}
+#friend_fullname_title{
+    width: 50%;
+    text-align: center;
+}
+#friend_course_title{
+    width: 30%;
+    text-align: center;
+}
+#friends_block_content{
+    width: 50%;
+    height: 89%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.friend_infoline{
+    box-sizing: border-box;
+    padding: 1em 5% 1em 5%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.friend_avatar{
+    width: 2.5vh;
+    height: 2.5vh;
+    background-color: #009aad;
+}
+
+.friend_fullname{
+    width: 50%;
+    text-align: center;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #000;
+}
+
+.friend_course{
+    width: 30%;
+    text-align: center;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E5E5E;
+}
+
 #progress>span {
     font-weight: 700;
     -webkit-background-clip: text;
