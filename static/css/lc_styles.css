@@ -191,7 +191,7 @@ nav a:hover {
     left: -300%;
     width: 50%;
     height: 100%;
-    background: linear-gradient(100deg,transparent 0,#fff 40%,#fff 60%,transparent 100%);
+    background: linear-gradient(110deg,transparent 0,#fff 40%,#fff 60%,transparent 100%);
     filter: blur(5px);
     animation: slide 10s ease-in-out infinite
 }
