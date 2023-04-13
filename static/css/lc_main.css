@@ -4,7 +4,7 @@
     --background_main_page: #e2e2e2;
     --text_color: #000;
     --header_color: #009aad;
-    
+
     --color_progress_left_coef_red: 0;
     --color_progress_left_coef_green: 154;
     --color_progress_left_coef_blue: 173;
@@ -22,7 +22,8 @@
     --font_size_records_text: min(14px, 1.1vw, 2.2vh);
     --text_font_size: min(16px, 1.2vw, 2.4vh);
     --preheader_font_size: min(18px, 1.3vw, 2.6vh);
-    --font_size_records_title: min(20px, 1.4vw, 2.8vh);;
+    --font_size_records_title: min(20px, 1.4vw, 2.8vh);
+    ;
     --font_size_ntf_text_and_lessons_title: min(22px, 1.5vw, 3vh);
     --header_font_size: min(24px, 1.6vw, 3.2vh);
 
@@ -50,83 +51,87 @@
     --left_projects_text: 18px;
 
     --msg_friends_list_width: 60%;
+    --chat_height: 85%;
 }
+
 /*------------------Стили для текста на странице-----------------------------*/
 .absolute {
     position: absolute
 }
 
 .form_header {
-    font-size: min(2.4vh,3vw);
+    font-size: min(2.4vh, 3vw);
     color: var(--header_color);
     top: var(--top_forms_header);
     left: var(--left_forms_header)
 }
 
-.msg_header{
+.msg_header {
     width: 100%;
     height: 12%;
     display: flex;
     align-items: center;
 }
 
-.projects_header{
+.projects_header {
     width: 100%;
     height: 27%;
     display: flex;
     align-items: center;
 }
 
-.records_header{
+.records_header {
     width: 100%;
     height: 13%;
     display: flex;
     align-items: center;
 }
 
-.form_header_lessons{
-    font-size: min(2.4vh,1.4vw);
+.form_header_lessons {
+    font-size: min(2.4vh, 1.4vw);
     color: var(--header_color);
     top: 7%;
     left: 3%;
 }
 
-.form_header_msg{
-    font-size: min(2.4vh,1.4vw);
+.form_header_msg {
+    font-size: min(2.4vh, 1.4vw);
     color: var(--header_color);
     width: 25%;
     padding-left: 1.5%;
 }
 
-.form_header_projects{
-    font-size: min(2.4vh,1.4vw);
+.form_header_projects {
+    font-size: min(2.4vh, 1.4vw);
     color: var(--header_color);
     width: 42%;
     padding-left: 2.5%;
 }
 
-.form_header_ntf{
-    font-size: min(2.4vh,1.4vw);
+.form_header_ntf {
+    font-size: min(2.4vh, 1.4vw);
     color: var(--header_color);
     top: 3%;
     left: 3%;
 }
 
-.form_header_records{
-    font-size: min(2.4vh,1.4vw);
+.form_header_records {
+    font-size: min(2.4vh, 1.4vw);
     color: var(--header_color);
     width: 30%;
     padding-left: 3%;
 }
-.records_preheader{
+
+.records_preheader {
     width: 100%;
     height: 12%;
     display: flex;
     align-items: center;
-    top:12%;
+    top: 12%;
 }
-.form_preheader_records{
-    font-size: min(2vh,1vw);
+
+.form_preheader_records {
+    font-size: min(2vh, 1vw);
     color: var(--header_color);
     width: 25%;
     padding-left: 25%;
@@ -138,8 +143,13 @@
     color: var(--text_color)
 }
 
-.form_header_lessons,.form_text, .form_header, .form_header_msg, 
-.form_header_projects, .form_header_ntf, .form_header_records{
+.form_header_lessons,
+.form_text,
+.form_header,
+.form_header_msg,
+.form_header_projects,
+.form_header_ntf,
+.form_header_records {
     z-index: 1;
     font-family: "Comfortaa";
     font-style: normal;
@@ -161,7 +171,7 @@
     grid-template-rows: 1.25fr 1fr 2fr;
     gap: 4% 4%;
     grid-auto-flow: row;
-    grid-template-areas: "progress progress ntf""lessons projects ntf""msg msg records"
+    grid-template-areas: "progress progress ntf" "lessons projects ntf" "msg msg records"
 }
 
 #main_content>* {
@@ -215,7 +225,7 @@
     line-height: 1.05em
 }
 
-#records_logo{
+#records_logo {
     width: 3.5vh;
     height: 2vh;
     padding-left: 20%;
@@ -230,7 +240,8 @@
     z-index: 1;
 }
 
-#records_title_2,#records_video2 {
+#records_title_2,
+#records_video2 {
     top: calc(var(--top_records_video_and_title) + 34%)
 }
 
@@ -297,12 +308,14 @@
     height: 400px
 }
 
-#bg1,#main_content>#msg>img {
+#bg1,
+#main_content>#msg>img {
     width: 100%;
     height: 332px
 }
 
-#bg2,#main_content>#lessons>img {
+#bg2,
+#main_content>#lessons>img {
     width: 100%;
     height: 164px
 }
@@ -338,7 +351,8 @@
     z-index: 2
 }
 
-#lessons_title_big,#lessons_title_mini {
+#lessons_title_big,
+#lessons_title_mini {
     position: absolute;
     top: 0;
     left: -2px;
@@ -389,17 +403,18 @@
     position: absolute;
     top: 4%;
     left: 15%;
-    background: linear-gradient(45deg,#009aad 33%,#2aabba 66%,#55bcc8)
+    background: linear-gradient(45deg, #009aad 33%, #2aabba 66%, #55bcc8)
 }
 
 #result_progress {
     position: absolute;
     top: 87%;
     left: 37%;
-    background: linear-gradient(45deg,#55bcc8 33%,#aadee3 66%,#fff)
+    background: linear-gradient(45deg, #55bcc8 33%, #aadee3 66%, #fff)
 }
 
-#areas_progress,.point_progress {
+#areas_progress,
+.point_progress {
     width: 100%;
     height: 100%;
     display: flex;
@@ -418,11 +433,13 @@
     font-size: 2em
 }
 
-#attendance_progress,#attendance_progress_title {
-    color: rgb(var(--color_progress_left_coef_red),var(--color_progress_left_coef_green),var(--color_progress_left_coef_blue))
+#attendance_progress,
+#attendance_progress_title {
+    color: rgb(var(--color_progress_left_coef_red), var(--color_progress_left_coef_green), var(--color_progress_left_coef_blue))
 }
 
-#areas_progress>::after,.point_progress>::before {
+#areas_progress>::after,
+.point_progress>::before {
     position: absolute;
     content: "";
     border-style: solid;
@@ -437,16 +454,19 @@
     height: 4em
 }
 
-#protected_projects_progress,#protected_projects_progress_title {
-    color: rgb(calc(var(--color_progress_left_coef_red) - var(--difference_red)),calc(var(--color_progress_left_coef_green) - var(--difference_green)),calc(var(--color_progress_left_coef_blue) - var(--difference_blue)))
+#protected_projects_progress,
+#protected_projects_progress_title {
+    color: rgb(calc(var(--color_progress_left_coef_red) - var(--difference_red)), calc(var(--color_progress_left_coef_green) - var(--difference_green)), calc(var(--color_progress_left_coef_blue) - var(--difference_blue)))
 }
 
-#failed_deadlines_progress,#failed_deadlines_progress_title {
-    color: rgb(calc(var(--color_progress_left_coef_red) - var(--difference_red)*2),calc(var(--color_progress_left_coef_green) - var(--difference_green)*2),calc(var(--color_progress_left_coef_blue) - var(--difference_blue)*2))
+#failed_deadlines_progress,
+#failed_deadlines_progress_title {
+    color: rgb(calc(var(--color_progress_left_coef_red) - var(--difference_red)*2), calc(var(--color_progress_left_coef_green) - var(--difference_green)*2), calc(var(--color_progress_left_coef_blue) - var(--difference_blue)*2))
 }
 
-#mark_progress,#mark_progress_title {
-    color: rgb(var(--color_progress_right_coef_red),var(--color_progress_right_coef_green),var(--color_progress_right_coef_blue))
+#mark_progress,
+#mark_progress_title {
+    color: rgb(var(--color_progress_right_coef_red), var(--color_progress_right_coef_green), var(--color_progress_right_coef_blue))
 }
 
 .point_progress {
@@ -487,18 +507,18 @@
     position: absolute
 }
 
-#friends_block{
+#friends_block {
     width: 100%;
     height: 30vh;
     top: 11%;
 }
 
-#friends_block > *{
-    position:static;
+#friends_block>* {
+    position: static;
     box-sizing: border-box;
 }
 
-#friends_block_title{  
+#friends_block_title {
     box-sizing: border-box;
     width: var(--msg_friends_list_width);
     height: 8%;
@@ -514,27 +534,170 @@
     color: var(--header_color);
 }
 
-#msg_title{
+#msg_title {
     width: 100%;
     display: flex;
 }
 
-#friends_logo{
+#chat_block_title {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - var(--msg_friends_list_width));
+    height: 8%;
+    padding: 0.7em 3% 0 calc(2.5em + 3%);
+    position: relative;
+}
+
+#interlocutor_avatar {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.friend_avatar {
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+}
+
+
+#interlocutor {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--header_color);
+    width: 50%;
+    text-align: center;
+}
+
+#interlocutor_lso {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5E5E5E;
+    width: 50%;
+    text-align: center;
+}
+
+
+#friends_logo {
     width: 2.5vh;
     height: 2.5vh;
     padding-left: 2%;
 }
-#friend_fullname_title{
+
+#friend_fullname_title {
     width: 50%;
     text-align: center;
 }
-#friend_course_title{
+
+#friend_course_title {
     width: 30%;
     text-align: center;
 }
-#friends_block_content{
-    width: var(--msg_friends_list_width);
+
+#msg_content_block {
+    margin-top: 1%;
+    box-sizing: border-box;
     height: 89%;
+    width: 100%;
+    display: flex;
+}
+
+#msg_box {
+    width: calc(100% - var(--msg_friends_list_width));
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#chat {
+    width: 100%;
+    height: var(--chat_height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ntf_not_msg {
+    width: 70%;
+    height: auto;
+    text-align: justify;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+    color: #000000;
+}
+
+#msg_box *,
+#msg_box {
+    box-sizing: border-box;
+}
+
+#msg_box>form {
+    width: calc(100% - 1px);
+    height: calc(100% - var(--chat_height) - 1px);
+    border-radius: 0 0 45px 0;
+    background-color: #D9D9D9;
+    border: 1px black solid;
+    border-left: 0px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding: 1.5% 4% 0 3%;
+}
+
+#chat_smile_logo,
+#chat_input_form,
+#chat_send_button {
+    height: 80%;
+}
+
+#chat_paperclip_logo {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: #009aad;
+}
+
+#chat_input_form {
+    position: relative;
+    width: 70%;
+    border-radius: 5px;
+    border: 1px solid #000000;
+}
+
+#chat_input_form::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100em;
+    height: 100em;
+    background-color: #009aad;
+}
+
+#chat_send_button {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: #009aad;
+
+}
+
+#friends_block_content {
+    width: var(--msg_friends_list_width);
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -542,7 +705,7 @@
     border-right: #000 1px solid;
 }
 
-.friend_infoline{
+.friend_infoline {
     box-sizing: border-box;
     padding: 0 5% 0 5%;
     width: 100%;
@@ -551,14 +714,14 @@
     align-items: center;
 }
 
-.friend_avatar{
+.friend_avatar {
     width: 5vh;
     height: 5vh;
     background-color: #009aad;
     border-radius: 50%;
 }
 
-.friend_fullname{
+.friend_fullname {
     width: 50%;
     text-align: center;
     font-family: 'Comfortaa';
@@ -569,7 +732,7 @@
     color: #000;
 }
 
-.friend_course{
+.friend_course {
     width: 30%;
     text-align: center;
     font-family: 'Comfortaa';
