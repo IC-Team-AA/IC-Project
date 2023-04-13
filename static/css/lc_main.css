@@ -18,7 +18,7 @@
     --difference_blue: calc((var(--color_progress_left_coef_blue) - var(--color_progress_right_coef_blue)) / 3);
 
     /*размеры шрифтов*/
-    --projects_font_size: 12px;
+    --projects_font_size: min(12px, 1vw, 2vh);
     --font_size_records_text: 14px;
     --text_font_size: 16px;
     --preheader_font_size: 18px;
@@ -95,7 +95,7 @@
     background-position: none;
     position: relative;
     object-fit: inherit;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
 }
 
 .lessons_text {
@@ -198,20 +198,21 @@
 }
 
 .projects_block {
-    padding-top: 10.5%;
+    padding-top: 6.5vh;
     width: 18%;
     text-align: center
 }
 
+
 .projects_photo {
-    width: 45%;
-    height: 60%;
-    object-fit: 100%auto
+    width: min(40px, 4vw);
+    height: min(60px, 6.5vh);
+    object-fit: contain
 }
 
 .projects_text {
     font-size: var(--projects_font_size);
-    padding-top: 5px
+    padding-top: 0.5vh
 }
 
 #main_content>#ntf>img {
