@@ -3,51 +3,33 @@
     --additional_color: white;
     --background_menu_color: black;
 
-    --header_height: 65px;
-    --header_height_125: 68px;
+    --header_height: 7vh;
+
+    --IC_logo_width: 3.5vw;
+    --IC_logo_ml: 2vw;
+    --IC_logo_height: 4.5vh;
+    --IC_logo_font_size: min(3vh, 3vw);
+    --IC_logo_border_radius: min(2vh, 1vw);
+    --IC_logo_border_width: max(1px, 0.2vw);
+
+    --IC_logo_title_font_size: min(3vh, 3vw);
+    --IC_logo_title_ml: 1.5vw;
+
+    --header_right_content_gap: max(5%,2vw);
+    --header_right_content_mr: 2.5vw;
+    --header_right_content_font_size: min(2vh, 3vw);
 
     --nav_width: 14%;
-    --nav_width_125: 210px;
-    --nav_menu_point_font_size: 19px;
-    --nav_menu_pont_font_size_125: 16px;
+    --nav_menu_point_font_size: min(1.8vh, 1vw);
+    --nav_menu_pont_mb: min(0.9vh, 0.5vw);
 
-    --IC_logo_width: 50px;
-    --IC_logo_height: 40px;
-    --IC_logo_width_125: 38px;
-    --IC_logo_height_125: 30px;
-    --IC_logo_ml: 23px;
-    --IC_logo_ml_125: 17px;
+    --user_avatar_size: 6vw;
+    --user_avatar_mt: 5vh;
+    --user_avatar_mb: 3vh;
 
-    --IC_logo_title: 311px;
-    --IC_logo_title_font_size: 30px;
-    --IC_logo_title: 233px;
-    --IC_logo_title_fint_size_125: 23px;
-    --IC_logo_title_ml: 22px;
-    --IC_logo_title_ml_125: 16px;
+    --user_full_name_mb: 1vh;
 
-
-    --header_right_content_gap: 63px;
-    --header_right_content_gap_125: 47px;
-    --header_right_content_mr: 48px;
-    --header_right_content_mr_125: 36px;
-    --header_right_content_font_size: 20px;
-    --header_right_content_font_size_125: 15px;
-
-    --nav_menu_pont_mb: 10px;
-    --nav_menu_pont_mb_125: 7px;
-
-    --user_avatar_size: 100px;
-    --user_avatar_size_125: 75px;
-    --user_avatar_mt: 50px;
-    --user_avatar_mt_125: 38px;
-    --user_avatar_mb: 20px;
-    --user_avatar_mb_125: 15px;
-
-    --user_full_name_mb: 30px;
-    --user_full_name_mb_125: 23px;
-
-    --focus_point_size: 8px;
-    --focus_point_size_125: 6px;
+    --focus_point_size: 0.4em;
 }
 
 @keyframes slide {
@@ -79,12 +61,12 @@ header {
 }
 
 #IC_logo {
-    border: 3px solid #009aad;
+    border: var(--IC_logo_border_width) solid #009aad;
     width: var(--IC_logo_width);
     height: var(--IC_logo_height);
-    border-radius: 17px;
+    border-radius: var(--IC_logo_border_radius);
     text-align: center;
-    margin-left: 23px;
+    margin-left: var(--IC_logo_ml);
     display: table;
     flex: initial
 }
@@ -99,7 +81,7 @@ header {
 #IC_logo_text {
     display: table-cell;
     vertical-align: middle;
-    font-size: 30px;
+    font-size: var(--IC_logo_font_size);
     line-height: 31px
 }
 
@@ -150,7 +132,7 @@ nav {
     flex: initial
 }
 
-nav a {
+nav a:not(:first-of-type) {
     margin-bottom: var(--nav_menu_pont_mb)
 }
 
@@ -181,14 +163,19 @@ nav a:hover {
     margin-bottom: var(--user_full_name_mb)
 }
 
-#focus_point {
+#focus_point{
     position: relative;
-    background-color: var(--additional_color);
+}
+
+#focus_point::after{
     border-radius: 50%;
+    position: absolute;
+    content: '';
     width: var(--focus_point_size);
     height: var(--focus_point_size);
     left: -3em;
-    top: 1.25em
+    top: 1em;
+    background-color: var(--additional_color);
 }
 
 .flicker_light {
