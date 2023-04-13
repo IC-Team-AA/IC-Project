@@ -30,7 +30,6 @@ window.onload = function () {
     setRelativeFont('#areas_progress > div', 'progress', 2);
     setRelativeFont('#point_progress > div', 'point_progress', 1.5);
     setRelativeFont('#progress > span', 'progress', 1.4);
-    setRelativeFont('#ntf > #ntf_wrapper > #ntf_text', 'ntf', 1.2);
     setFormSize();
 }
 
@@ -38,7 +37,6 @@ window.onresize = function(){
     setRelativeFont('#areas_progress > div', 'progress', 2);
     setRelativeFont('#point_progress > div', 'point_progress', 1.5);
     setRelativeFont('#progress > span', 'progress', 1.4);
-    setRelativeFont('#ntf > #ntf_wrapper > #ntf_text', 'ntf', 1.2);
     setFormSize();
 }
 

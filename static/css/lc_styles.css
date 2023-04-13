@@ -22,6 +22,7 @@
     --nav_width: 14%;
     --nav_menu_point_font_size: min(1.8vh, 1vw);
     --nav_menu_pont_mb: min(0.9vh, 0.5vw);
+    --nav_menu_line_height: 5vh;
 
     --user_avatar_size: 6vw;
     --user_avatar_mt: 5vh;
@@ -128,7 +129,7 @@ nav {
     font-style: normal;
     font-weight: 400;
     font-size: var(--nav_menu_point_font_size);
-    line-height: 44px;
+    line-height: var(--nav_menu_line_height);
     flex: initial
 }
 

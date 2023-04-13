@@ -19,12 +19,12 @@
 
     /*размеры шрифтов*/
     --projects_font_size: min(12px, 1vw, 2vh);
-    --font_size_records_text: 14px;
-    --text_font_size: 16px;
-    --preheader_font_size: 18px;
-    --font_size_records_title: 20px;
-    --font_size_ntf_text_and_lessons_title: 22px;
-    --header_font_size: 24px;
+    --font_size_records_text: min(14px, 1.1vw, 2.2vh);
+    --text_font_size: min(16px, 1.2vw, 2.4vh);
+    --preheader_font_size: min(18px, 1.3vw, 2.6vh);
+    --font_size_records_title: min(20px, 1.4vw, 2.8vh);;
+    --font_size_ntf_text_and_lessons_title: min(22px, 1.5vw, 3vh);
+    --header_font_size: min(24px, 1.6vw, 3.2vh);
 
     /*Отспуты*/
     --top_forms_header: 3%;
@@ -33,16 +33,16 @@
     --left_forms_preheader: 60%;
     --p_beet_clicks: 11.5em;
 
-    --top_lessons_title: 60px;
-    --top_lessons_text: 90px;
+    --top_lessons_title: 36%;
+    --top_lessons_text: 54%;
 
     --top_ntf_text: 15%;
     --left_ntf_text: 5%;
 
     --top_records_video_and_title: 30%;
     --left_records_video: 5%;
-    --top_records_text: 135px;
-    --top_records_date: 185px;
+    --top_records_text: 40%;
+    --top_records_date: 54%;
     --left_records_description: 45%;
 
     --top_projects_block: 60px;
@@ -70,6 +70,20 @@
     align-items: center;
 }
 
+.projects_header{
+    width: 100%;
+    height: 27%;
+    display: flex;
+    align-items: center;
+}
+
+.records_header{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    align-items: center;
+}
+
 .form_header_lessons{
     font-size: min(2.4vh,1.4vw);
     color: var(--header_color);
@@ -84,12 +98,48 @@
     padding-left: 1.5%;
 }
 
+.form_header_projects{
+    font-size: min(2.4vh,1.4vw);
+    color: var(--header_color);
+    width: 42%;
+    padding-left: 2.5%;
+}
+
+.form_header_ntf{
+    font-size: min(2.4vh,1.4vw);
+    color: var(--header_color);
+    top: 3%;
+    left: 3%;
+}
+
+.form_header_records{
+    font-size: min(2.4vh,1.4vw);
+    color: var(--header_color);
+    width: 30%;
+    padding-left: 3%;
+}
+.records_preheader{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    top:12%;
+}
+.form_preheader_records{
+    font-size: min(2vh,1vw);
+    color: var(--header_color);
+    width: 25%;
+    padding-left: 25%;
+    z-index: 1;
+}
+
 .form_text {
     font-size: var(--text_font_size);
     color: var(--text_color)
 }
 
-.form_header_lessons,.form_text, .form_header, .form_header_msg {
+.form_header_lessons,.form_text, .form_header, .form_header_msg, 
+.form_header_projects, .form_header_ntf, .form_header_records{
     z-index: 1;
     font-family: "Comfortaa";
     font-style: normal;
@@ -128,13 +178,14 @@
 
 #lessons_title {
     top: var(--top_lessons_title);
-    font-size: var(--font_size_ntf_text_and_lessons_title);
+    font-size: min(2.5vh, 1.3vw);
     text-decoration: underline
 }
 
 #lessons_text {
     top: var(--top_lessons_text);
-    line-height: 1.3rem
+    font-size: min(1.7vh, 1vw);
+    line-height: 140%;
 }
 
 #forms_preheader {
@@ -164,9 +215,19 @@
     line-height: 1.05em
 }
 
+#records_logo{
+    width: 3.5vh;
+    height: 2vh;
+    padding-left: 20%;
+    z-index: 1;
+}
+
 .records_video {
+    width: 35%;
+    height: 28%;
     top: var(--top_records_video_and_title);
-    left: var(--left_records_video)
+    left: var(--left_records_video);
+    z-index: 1;
 }
 
 #records_title_2,#records_video2 {
@@ -175,8 +236,9 @@
 
 .records_description {
     left: var(--left_records_description);
-    font-size: var(--font_size_records_text);
+    font-size: min(0.8vw, 1.6vh);
     width: 50%;
+    z-index: 1;
     text-align: left;
     font-weight: 600
 }
@@ -188,7 +250,7 @@
 }
 
 .records_text {
-    line-height: 1.2rem;
+    line-height: 120%;
     top: var(--top_records_text)
 }
 

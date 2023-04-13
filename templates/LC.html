@@ -65,17 +65,19 @@
                     <span class="form_text" id="result_progress">Отличный результат( лучше, чем у 90% учащихся )</span>
                 </div>
                 <div id="lessons">
-                    <span class="absolute form_header_lessons">Ближайшие уроки</span>
-                    <span class="absolute form_text lessons_text" id="lessons_title">Python 30 матра 14:30</span>
-                    <span class="absolute form_text lessons_text" id="lessons_text">web-дизайн 2 апреля<br>
+                    <div class="absolute form_header_lessons">Ближайшие уроки</div>
+                    <div class="absolute form_text lessons_text" id="lessons_title">Python 30 матра 14:30</div>
+                    <div class="absolute form_text lessons_text" id="lessons_text">web-дизайн 2 апреля<br>
                                             C++ 2 апреля<br>
-                                            JavaScript 4 апреля</span>
+                                            JavaScript 4 апреля</div>
                     <img class="widget_form" src="/static/img/form_lessons.png">
 
                 </div>
                 <div id="projects">
-                    <span class="absolute form_header">Ваши проекты</span>
-                    <span class="absolute form_header" id="forms_header_msg">Кодревью</span>
+                    <div class="projects_header">
+                        <div class="form_header_projects">Ваши проекты</div>
+                        <div class="form_header_projects">Кодревью</div>
+                    </div>
                     <div id="projects_wrapper">
                         <div class="projects_block">
                             <img class="projects_photo" src="/static/img/projects/python.png">
@@ -145,7 +147,7 @@
                     </div>
                 </div>
                 <div id="ntf">
-                    <span class="absolute form_header">Уведомления</span>
+                    <div class="absolute form_header_ntf">Уведомления</div>
                     <div id="ntf_wrapper">
                         <div class="form_text" id="ntf_text">
                             · &nbsp&nbspЗавтра дедлайн по проекту: ”Автоматизация СУБД”.</div>
@@ -159,9 +161,14 @@
                     <img class="widget_form" src="/static/img/form_ntf.png">
                 </div>
                 <div id="records" class="form_text">
-                    <span class="absolute form_header">Записи</span>
-                    <span class="absolute form_header" id="forms_header_records">Доп.материалы</span>
-                    <span class="absolute form_header" id="forms_preheader">Описание</span>
+                    <div class="records_header">
+                        <div class="form_header_records">Записи</div>
+                        <div class="form_header_records">Доп.материалы</div>
+                    </div>
+                    <div class="records_preheader">
+                        <img id="records_logo" src="/static/img/msg/records_logo.png" alt="">
+                        <div class="form_preheader_records">Описание</div>
+                    </div>
                     <span class="absolute records_description records_title">C++ урок 16</span>
                     <span class="absolute records_description records_text">Разбор логических операторов в схемах.</span>
                     <span class="absolute records_description" id="records_date">28.03.2023</span>
