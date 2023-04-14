@@ -68,8 +68,8 @@ body {
     font-family: 'Inconsolata';
     font-style: normal;
     font-weight: 700;
-    font-size: 120px;
-    line-height: 126px;
+    font-size: min(14vh, 10vw);
+    line-height: min(12vh, 8vw);
     text-align: center;
     color: var(--main_color);
     text-align: center;
@@ -83,8 +83,8 @@ body {
     font-family: 'Inconsolata';
     font-style: normal;
     font-weight: 700;
-    font-size: 130px;
-    line-height: 136px;
+    font-size:  min(14vh, 9vw);
+    line-height: min(12vh, 7vw);
     text-align: center;
     border-radius: 29px;
     border: var(--main_color) 6px solid;
@@ -98,8 +98,8 @@ body {
     width: var(--authorization_form_width);
     height: 100%;
     background-color: black;
-    border: var(--main_color) 5px solid;
-    border-radius: 50px;
+    border: var(--main_color) min(0.6vh, 0.4vw) solid;
+    border-radius: min(5vh, 3vw);
     display: flex;
     flex-direction: column;
 }
@@ -113,8 +113,8 @@ body {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
-    line-height: 56px;
+    font-size:  min(5vh, 3vw);
+    line-height: min(5vh, 3vw);
     text-align: center;
     color: var(--main_color);
     display: flex;
@@ -129,8 +129,8 @@ body {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 700;
-    font-size: 70px;
-    line-height: 56px;
+    font-size: min(5vh, 3vw);
+    line-height: min(5vh, 3vw);
     text-align: center;
     color: var(--main_color);
 }
@@ -165,8 +165,8 @@ body {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 33px;
+    font-size: min(3vh, 2vw);
+    line-height: min(3vh, 2vw);
     color: #626262;
 }
 
@@ -175,15 +175,18 @@ body {
     height: 100%;
     width: 15%;
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 20px 0 0 20px;
 }
 
 #logo_email {
-    background-image: url();
+    background-image: url(/static/img/authorization/unnamed.png);
 }
 
 #logo_pass {
-    background-image: url();
+    background-image: url(/static/img/authorization/padlock.png);
 }
 
 #input_email,
@@ -208,16 +211,18 @@ body {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 31px;
+    display: flex;
+    align-items: center;
+    font-size: min(2.5vh, 1.4vw);
+    line-height: min(2.5vh, 1.4vw);
 }
 
 #additional_option a{
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 31px;
+    font-size: min(2.5vh, 1.4vw);
+    line-height: min(2.5vh, 1.4vw);
     text-decoration-line: underline;
     color: var(--main_color);
 }
@@ -232,8 +237,8 @@ body {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 45px;
+    font-size: min(5vh, 3vw);
+    line-height: min(5vh, 3vw);
     color: var(--main_color);
     box-sizing: border-box;
 }
@@ -245,8 +250,8 @@ body {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 700;
-    font-size: 50px;
-    line-height: 56px;
+    font-size: min(5vh, 3vw);
+    line-height: min(5vh, 3vw);
     color: var(--main_color);
     border-radius: 0px 0px 50px 50px;
     display: flex;
@@ -263,37 +268,54 @@ body {
 }
 
 #logo_facebook{
-    background-image: url();
+    background-image: url(/static/img/authorization/facebook.png);
 }
 #logo_google{
-    background-image: url();
+    background-image: url(/static/img/authorization/goolge+.png);
 }
 #logo_vk{
-    background-image: url();
+    background-image: url(/static/img/authorization/vk.jpg);
 }
 #logo_tweter{
-    background-image: url();
+    background-image: url(/static/img/authorization/twitter.png);
 }
 #logo_apple{
-    background-image: url();
+    background-image: url(/static/img/authorization/appleid.png);
 }
 
-#logo_email,
-#logo_pass,
+#logo_email{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: min(5.6vh, 2.8vw);
+    width: min(5.6vh, 2.8vw);
+}
+#logo_pass{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: min(5.6vh, 2.8vw);
+    width: min(5.6vh, 2.8vw);
+}
 #logo_facebook,
 #logo_google,
 #logo_vk,
 #logo_tweter,
 #logo_apple{
     background-size: cover;
+    width: 1.2em;
+    height: 1.2em;
 }
 
 #lang_selecter {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 45px;
+    font-size: min(5vh, 3vw);
+    line-height: min(5vh, 3vw);
     color: var(--main_color);
     margin-left: 6vw;
+}
+
+#checkbox{
+    height: min(2.4vh, 1.2vw);
+    width: min(2.4vh, 1.2vw);
 }
