@@ -1,13 +1,299 @@
+:root {
+    --all_content_magrin_right: 13vw;
+    --all_content_magrin_left: 6vw;
+    --all_content_magrin_top: 9vh;
+    --all_content_magrin_bottom: 9vh;
+
+    --Company_title_width: 35vw;
+    --Company_title_height: 26vh;
+
+    --Company_logo_width: 15vw;
+    --Company_logo_height: 9vw;
+
+    --attributes_container_gap: 11vh;
+
+    --authorization_form_width: 39vw;
+
+    --authorization_form_title_height: 13%;
+    --authorization_form_footer_height: 13%;
+
+
+    --main_color: #009AAC;
+
+
+}
+
 html,
 body {
     height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
 }
 
-#matrix_background{
+body {
+    padding: var(--all_content_magrin_top) var(--all_content_magrin_right) var(--all_content_magrin_bottom) var(--all_content_magrin_left);
+}
+
+#matrix_background {
     position: fixed;
     background: black;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
+}
+
+#authorization_page_content {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#attributes_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--Company_title_width);
+    align-items: center;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#Company_title {
+    width: var(--Company_title_width);
+    height: var(--Company_title_height);
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 126px;
+    text-align: center;
+    color: var(--main_color);
+    text-align: center;
+}
+
+#Company_logo {
+    margin-top: var(--attributes_container_gap);
+    width: var(--Company_logo_width);
+    height: var(--Company_logo_height);
+    background-color: rgb(0, 0, 0);
+    font-family: 'Inconsolata';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 130px;
+    line-height: 136px;
+    text-align: center;
+    border-radius: 29px;
+    border: var(--main_color) 6px solid;
+    color: var(--main_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#authorization_form {
+    width: var(--authorization_form_width);
+    height: 100%;
+    background-color: black;
+    border: var(--main_color) 5px solid;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#authorization_form_title {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    height: var(--authorization_form_title_height);
+    border-radius: 50px 50px 0px 0px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 56px;
+    text-align: center;
+    color: var(--main_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form_close {
+    position: absolute;
+    right: calc(var(--authorization_form_width) / 20);
+    top: calc(var(--authorization_form_title_height)*2);
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 56px;
+    text-align: center;
+    color: var(--main_color);
+}
+
+#authorization_form form {
+    width: 100%;
+    height: calc(100% - var(--authorization_form_footer_height) - var(--authorization_form_title_height));
+    background-color: rgb(227, 227, 227);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+
+#additional_option {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 98%;
+}
+
+.input_with_logo {
+    box-sizing: border-box;
+    display: flex;
+}
+
+.input_with_logo input::placeholder{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 33px;
+    color: #626262;
+}
+
+
+.input_logo {
+    height: 100%;
+    width: 15%;
+    background-color: black;
+    border-radius: 20px 0 0 20px;
+}
+
+#logo_email {
+    background-image: url();
+}
+
+#logo_pass {
+    background-image: url();
+}
+
+#input_email,
+#input_pass {
+    width: 85%;
+    height: 6vh;
+    border-radius: 0 20px 20px 0;
+    box-sizing: border-box;
+    padding-top: 1vh;
+    padding-left: 0.5vw;
+}
+
+#buttons_container {
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    height: 17vh;
+}
+
+#additional_option label{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+}
+
+#additional_option a{
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 31px;
+    text-decoration-line: underline;
+    color: var(--main_color);
+}
+
+#button_log_in_enter,
+#button_sign_up {
+    width: 100%;
+    height: 7vh;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: var(--main_color);
+    box-sizing: border-box;
+}
+
+#authorization_form_footer {
+    width: 100%;
+    background-color: black;
+    height: var(--authorization_form_footer_height);
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 56px;
+    color: var(--main_color);
+    border-radius: 0px 0px 50px 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.social_logo {
+    width: 3vw;
+    height: 5vh;
+    border-radius: 50%;
+    background-color: #009AAC;
+    margin-left: 2vw;
+}
+
+#logo_facebook{
+    background-image: url();
+}
+#logo_google{
+    background-image: url();
+}
+#logo_vk{
+    background-image: url();
+}
+#logo_tweter{
+    background-image: url();
+}
+#logo_apple{
+    background-image: url();
+}
+
+#logo_email,
+#logo_pass,
+#logo_facebook,
+#logo_google,
+#logo_vk,
+#logo_tweter,
+#logo_apple{
+    background-size: cover;
+}
+
+#lang_selecter {
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: var(--main_color);
+    margin-left: 6vw;
 }
