@@ -59,6 +59,10 @@
     position: absolute
 }
 
+.clickable{
+    cursor: pointer;
+}
+
 .form_header {
     font-size: min(2.4vh, 3vw);
     color: var(--header_color);
@@ -551,14 +555,38 @@
 }
 
 #interlocutor_avatar {
-    position: absolute;
+    position: relative;
     top: 0.7em;
     left: 0.5em;
     width: min(5vh, 3vw);
     height: min(5vh, 3vw);
     border-radius: 50%;
     border: 3px solid white;
+    transition: border-color 0.5s ease-in-out;
 }
+
+#interlocutor_avatar::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    border-radius: 50%;
+    border: 3px solid #009aad;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#interlocutor_avatar:hover {
+    border-color: #009aad;
+}
+
+#interlocutor_avatar:hover::before {
+    opacity: 1;
+}
+
 
 #interlocutor {
     font-family: 'Comfortaa';
@@ -668,11 +696,19 @@
 #chat_input_form::after {
     content: "";
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100em;
-    height: 100em;
+    top: 0.25vh;
+    left: 0.2vw;
+    width: 1.8vh;
+    height: 1.8vh;
     background-color: #009aad;
+    display: block;
+    z-index: 1;
+}
+
+#chat_input_form input {
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 #chat_send_button {
@@ -697,6 +733,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    transition: box-shadow, border-radius 0.3s ease-in-out;
+}
+
+.friend_infoline:hover {
+    box-shadow: 0 0 15px #009aad;
+    border-radius: 50px;
 }
 
 .friend_avatar {

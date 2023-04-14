@@ -43,7 +43,7 @@
             <a href="#">Мессенджер</a>
             <a href="#">Каталог курсов</a>
             <a href="#">Мои бонусы</a>
-            <a href="#">Сертефикаты</a>
+            <a href="#">Сертификаты</a>
             <a href="#">Настройки</a>
         </nav>
         <section id="main_page">
@@ -58,7 +58,7 @@
                     </div>
                     <div class="point_progress form_text" id="point_progress">
                         <div id="attendance_progress_title"><span>Посещаемость</span></div>
-                        <div id="protected_projects_progress_title"><span>Защишено работ</span></div>
+                        <div id="protected_projects_progress_title"><span>Защищеных работ</span></div>
                         <div id="failed_deadlines_progress_title"><span>Слитых Deadline'ов</span></div>
                         <div id="mark_progress_title"><span>Общая оценка</span></div>
                     </div>
@@ -68,45 +68,45 @@
                     <div class="absolute form_header_lessons">Ближайшие уроки</div>
                     <div class="absolute form_text lessons_text" id="lessons_title">Python 30 матра 14:30</div>
                     <div class="absolute form_text lessons_text" id="lessons_text">web-дизайн 2 апреля<br>
-                                            C++ 2 апреля<br>
-                                            JavaScript 4 апреля</div>
+                        C++ 2 апреля<br>
+                        JavaScript 4 апреля</div>
                     <img class="widget_form" src="/static/img/form_lessons.png">
 
                 </div>
                 <div id="projects">
                     <div class="projects_header">
-                        <div class="form_header_projects">Ваши проекты</div>
-                        <div class="form_header_projects">Кодревью</div>
+                        <div class="form_header_projects clickable">Ваши проекты</div> 
+                        <div class="form_header_projects clickable">Кодревью</div>
                     </div>
                     <div id="projects_wrapper">
                         <div class="projects_block">
-                            <img class="projects_photo" src="/static/img/projects/python.png">
-                            <p class="form_text projects_text">path_creatop</p>  
+                            <img class="projects_photo clickable" src="/static/img/projects/python.png">
+                            <p class="form_text projects_text clickable">path_creatop</p>
                         </div>
                         <div class="projects_block">
-                            <img class="projects_photo" src="/static/img/projects/js.png">
-                            <p class="form_text projects_text">matrix</p>
+                            <img class="projects_photo clickable" src="/static/img/projects/js.png">
+                            <p class="form_text projects_text clickable">matrix</p>
                         </div>
                         <div class="projects_block">
-                            <img class="projects_photo" src="/static/img/projects/html.png">
-                            <p class="form_text projects_text">index</p>
+                            <img class="projects_photo clickable" src="/static/img/projects/html.png">
+                            <p class="form_text projects_text clickable">index</p>
                         </div>
                         <div class="projects_block">
-                            <img class="projects_photo" src="/static/img/projects/python.png">
-                            <p class="form_text projects_text">root_finder</p>
+                            <img class="projects_photo clickable" src="/static/img/projects/python.png">
+                            <p class="form_text projects_text clickable">root_finder</p>
                         </div>
                         <div class="projects_block">
-                            <img class="projects_photo" src="/static/img/projects/ruby.png">
-                            <p class="form_text projects_text">project_1</p>
+                            <img class="projects_photo clickable" src="/static/img/projects/ruby.png">
+                            <p class="form_text projects_text clickable">project_1</p>
                         </div>
                     </div>
                     <img class="widget_form" id="bg2" src="/static/img/form_projects.png">
                 </div>
                 <div id="msg">
                     <div class="msg_header">
-                        <div class="form_header_msg">Одногруппники</div>
-                        <div class="form_header_msg">Преподаватели</div>
-                        <div class="form_header_msg">Поддержка</div>
+                        <div class="form_header_msg clickable">Одногруппники</div>
+                        <div class="form_header_msg clickable">Преподаватели</div>
+                        <div class="form_header_msg clickable">Поддержка</div>
                     </div>
                     <img class="widget_form" src="/static/img/form_chats.png">
                     <div id="friends_block">
@@ -117,9 +117,10 @@
                                 <span id="friend_course_title">Курс</span>
                             </div>
                             <div id="chat_block_title">
-                                <img id="interlocutor_avatar" src="/static/img/msg/kate zamotina.png" alt="">
+                                <img id="interlocutor_avatar" class="clickable" src="/static/img/msg/kate zamotina.png" alt="">
                                 <span id="interlocutor">Екатерина</span>
-                                <div style="align-items: end; height: 100%; display: flex; justify-content: end; padding-right: 2%;">
+                                <div
+                                    style="align-items: end; height: 100%; display: flex; justify-content: end; padding-right: 2%;">
                                     <span id="interlocutor_lso">5 минут назад</span>
                                 </div>
                             </div>
@@ -127,22 +128,22 @@
                         <div id="msg_content_block">
                             <div id="friends_block_content">
                                 <div class="friend_infoline">
-                                    <img class="friend_avatar" src="/static/img/msg/liza efimova.png" alt="">
+                                    <img class="friend_avatar clickable" src="/static/img/msg/liza efimova.png" alt="">
                                     <span class="friend_fullname">Лиза Ефимова</span>
                                     <span class="friend_course">С++</span>
                                 </div>
                                 <div class="friend_infoline">
-                                    <img class="friend_avatar" src="/static/img/msg/kate zamotina.png" alt="">
+                                    <img class="friend_avatar clickable" src="/static/img/msg/kate zamotina.png" alt="">
                                     <span class="friend_fullname">Екатерина Замятина</span>
                                     <span class="friend_course">Python, Web, ...</span>
                                 </div>
                                 <div class="friend_infoline">
-                                    <img class="friend_avatar" src="/static/img/msg/maria utkina.png" alt="">
+                                    <img class="friend_avatar clickable" src="/static/img/msg/maria utkina.png" alt="">
                                     <span class="friend_fullname">Мария Уткина</span>
                                     <span class="friend_course">Java Script</span>
                                 </div>
                                 <div class="friend_infoline">
-                                    <img class="friend_avatar" src="/static/img/msg/anna sivakova.png" alt="">
+                                    <img class="friend_avatar clickable" src="/static/img/msg/anna sivakova.png" alt="">
                                     <span class="friend_fullname">Аня Сивакова</span>
                                     <span class="friend_course">Java Script</span>
                                 </div>
@@ -155,7 +156,9 @@
                                 </div>
                                 <form action="">
                                     <img src="/static/img/msg/paperclip.png" alt="" id="chat_paperclip_logo">
-                                    <input id="chat_input_form" type="text">
+                                    <div id="chat_input_form">
+                                        <input type="text">
+                                    </div>
                                     <img src="/static/img/msg/send.png" alt="" id="chat_send_button">
                                 </form>
                             </div>
@@ -168,9 +171,10 @@
                         <div class="form_text" id="ntf_text">
                             · &nbsp&nbspЗавтра дедлайн по проекту: ”Автоматизация СУБД”.</div>
                         <div class="form_text" id="ntf_text">
-                            · &nbsp&nbspВам задано новое домашнее задание: “Разработка макета сайта продуктового магазина”.</div>
+                            · &nbsp&nbspВам задано новое домашнее задание: “Разработка макета сайта продуктового
+                            магазина”.</div>
                         <div class="form_text" id="ntf_text">
-                            · &nbsp&nbspЧерез 4 дня кончается ваш абонимент по крсу “Python”.</div>
+                            · &nbsp&nbspЧерез 4 дня кончается ваш абонимент по курсу “Python”.</div>
                         <div class="form_text" id="ntf_text">
                             · &nbsp&nbspTomorrow is the deadline for the project: ”DBMS automation".</div>
                     </div>
@@ -178,21 +182,23 @@
                 </div>
                 <div id="records" class="form_text">
                     <div class="records_header">
-                        <div class="form_header_records">Записи</div>
-                        <div class="form_header_records">Доп.материалы</div>
+                        <div class="form_header_records clickable">Записи</div>
+                        <div class="form_header_records clickable">Доп.материалы</div>
                     </div>
                     <div class="records_preheader">
                         <img id="records_logo" src="/static/img/msg/records_logo.png" alt="">
                         <div class="form_preheader_records">Описание</div>
                     </div>
                     <span class="absolute records_description records_title">C++ урок 16</span>
-                    <span class="absolute records_description records_text">Разбор логических операторов в схемах.</span>
+                    <span class="absolute records_description records_text">Разбор логических операторов в
+                        схемах.</span>
                     <span class="absolute records_description" id="records_date">28.03.2023</span>
                     <span class="absolute records_description records_title" id="records_title_2">Python урок 21</span>
-                    <span class="absolute records_description records_text" id="records_text_2">Изучение модулей numpy и tkinter и их использование.</span>
+                    <span class="absolute records_description records_text" id="records_text_2">Изучение модулей numpy и
+                        tkinter и их использование.</span>
                     <span class="absolute records_description" id="records_date_2">28.03.2023</span>
-                    <img class="absolute records_video" src="/static/img/video1.jpg">
-                    <img class="absolute records_video" src="/static/img/video2.png" id="records_video2">
+                    <img class="absolute records_video clickable" src="/static/img/video1.jpg">
+                    <img class="absolute records_video clickable" src="/static/img/video2.png" id="records_video2">
                     <img class="widget_form" src="/static/img/form_records.png" id="bg1">
                 </div>
             </div>
