@@ -1,6 +1,5 @@
 "use strict";
 
-
 function setFormSize() {
     const divsWithImages = document.querySelectorAll('#main_content > div');
     divsWithImages.forEach(

@@ -1,0 +1,13 @@
+html,
+body {
+    height: 100vh;
+}
+
+#matrix_background{
+    position: fixed;
+    background: black;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
