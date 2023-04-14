@@ -1,28 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/static/css/reset.css">
-    <link rel="stylesheet" href="/static/css/authorization.css">    
+    <link rel="stylesheet" href="/static/css/authorization.css">
 </head>
+
 <body>
     <canvas id="matrix_background"></canvas>
     <section id="authorization_page_content">
-        <div class="attributes_container">
+        <div id="attributes_container">
             <div id="Company_title">
                 Ikigai Creative
             </div>
             <div id="Company_logo">
-                Ikigai Creative
+                IС
             </div>
-        </div> 
+        </div>
         <section id="authorization_form">
-
+            <div id="authorization_form_title">Авторизация <span id="form_close">&times;</span> </div>
+            <form action="">
+                <div class="input_with_logo">
+                    <div class="input_logo" id="logo_email"></div>
+                    <input type="text" placeholder="Введите E-mail" id="input_email">
+                </div>
+                <div class="input_with_logo">
+                    <div class="input_logo" id="logo_pass"></div>
+                    <input type="password" placeholder="Введите пароль" id="input_pass">
+                </div>
+                <div id="additional_option">
+                    <label>
+                        <input type="checkbox"> Запомнить меня<br>
+                    </label>
+                    <a href="#">Забыли пароль?</a>
+                </div>
+                <div id="buttons_container">
+                    <button id="button_log_in_enter">Войти</button>
+                    <button id="button_sign_up">Регистрация</button>
+                </div>
+            </form>
+            <div id="authorization_form_footer">
+                <div class="social_logo" id="logo_facebook"></div>
+                <div class="social_logo" id="logo_google"></div>
+                <div class="social_logo" id="logo_vk"></div>
+                <div class="social_logo" id="logo_tweter"></div>
+                <div class="social_logo" id="logo_apple"></div>
+                <div id="lang_selecter">RU</div>
+            </div>
         </section>
     </section>
     <script type="module" src="/static/scripts/matrix/main.js"></script>
 </body>
+
 </html>
