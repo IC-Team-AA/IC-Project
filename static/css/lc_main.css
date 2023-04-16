@@ -137,8 +137,7 @@
 .form_preheader_records {
     font-size: min(2vh, 1vw);
     color: var(--header_color);
-    width: 25%;
-    padding-left: 25%;
+    width: 50%;
     z-index: 1;
 }
 
@@ -230,8 +229,7 @@
 }
 
 #records_logo {
-    width: 3.5vh;
-    height: 2vh;
+    width: min(3.5vh, 2vw);
     padding-left: 20%;
     z-index: 1;
 }
