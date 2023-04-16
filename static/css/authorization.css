@@ -196,6 +196,7 @@ body {
     border-radius: 0 20px 20px 0;
     box-sizing: border-box;
     padding-top: 1vh;
+    font-size: min(2.8vh, 1.4vw);
     padding-left: 0.5vw;
 }
 
@@ -271,7 +272,7 @@ body {
     background-image: url(/static/img/authorization/facebook.png);
 }
 #logo_google{
-    background-image: url(/static/img/authorization/goolge+.png);
+    background-image: url(/static/img/authorization/google_plus_logo_.png);
 }
 #logo_vk{
     background-image: url(/static/img/authorization/vk.jpg);
