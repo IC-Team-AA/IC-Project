@@ -716,8 +716,8 @@
 
 .friend_infoline {
     box-sizing: border-box;
-    padding: 0 5% 0 5%;
-    width: 100%;
+    padding: 0 3% 0 3%;
+    width: 96%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -735,6 +735,34 @@
     height: min(5vh, 3vw);
     background-color: #009aad;
     border-radius: 50%;
+}
+.online::before{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+    background-image: url("/static/img/msg/online.png");
+}
+
+.offline::after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 15px;
+    height: 15px;
+    background-image: url("/static/img/msg/offline.png");
+}
+
+.mobile::after{
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 15px;
+    height: 15px;
+    background-image: url("/static/img/msg/mobile.png");
 }
 
 .friend_fullname {
