@@ -196,7 +196,7 @@ body {
     border-radius: 0 20px 20px 0;
     box-sizing: border-box;
     padding-top: 1vh;
-    font-size: min(2.8vh, 1.4vw);
+    font-size: min(3.5vh, 2vw);
     padding-left: 0.5vw;
 }
 
@@ -319,4 +319,5 @@ body {
 #checkbox{
     height: min(2.4vh, 1.2vw);
     width: min(2.4vh, 1.2vw);
+    margin: 0vh 0.5vw 0.3vh 0vw;
 }

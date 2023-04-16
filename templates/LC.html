@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/css/reset.css">
     <link rel="stylesheet" href="/static/css/lc_styles.css">
+    <link rel="stylesheet" href="/static/css/general_styles.css">
     <title>Главная страница</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -155,11 +156,11 @@
                                     </span>
                                 </div>
                                 <form action="">
-                                    <img src="/static/img/msg/paperclip.png" alt="" id="chat_paperclip_logo">
+                                    <img class="clickable" src="/static/img/msg/paperclip.png" alt="" id="chat_paperclip_logo">
                                     <div id="chat_input_form">
                                         <input class = "form_text" type="text" placeholder="Напишите сообщение">
                                     </div>
-                                    <img src="/static/img/msg/send.png" alt="" id="chat_send_button">
+                                    <img class="clickable" src="/static/img/msg/send.png" alt="" id="chat_send_button">
                                 </form>
                             </div>
                         </div>
@@ -186,7 +187,8 @@
                         <div class="form_header_records clickable">Доп.материалы</div>
                     </div>
                     <div class="records_preheader">
-                        <div style="width:50%; display: inline; align-items: center;">
+                        <div style="width:35%; display: flex; align-items: center; justify-content: center;
+                        padding-left: 5%;">
                             <img id="records_logo" src="/static/img/msg/records_logo.png" alt="">
                         </div>
                         <div class="form_preheader_records">Описание</div>

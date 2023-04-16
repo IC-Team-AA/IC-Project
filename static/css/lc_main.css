@@ -55,13 +55,6 @@
 }
 
 /*------------------Стили для текста на странице-----------------------------*/
-.absolute {
-    position: absolute
-}
-
-.clickable{
-    cursor: pointer;
-}
 
 .form_header {
     font-size: min(2.4vh, 3vw);
@@ -137,7 +130,8 @@
 .form_preheader_records {
     font-size: min(2vh, 1vw);
     color: var(--header_color);
-    width: 50%;
+    width: 60%;
+    text-align: center;
     z-index: 1;
 }
 
@@ -207,10 +201,6 @@
     font-size: var(--preheader_font_size)
 }
 
-#forms_header_records {
-    left: calc(var(--left_forms_header) + 150px)
-}
-
 #ntf_wrapper {
     width: 94%;
     height: 85%;
@@ -230,7 +220,6 @@
 
 #records_logo {
     width: min(3.5vh, 2vw);
-    padding-left: 20%;
     z-index: 1;
 }
 
