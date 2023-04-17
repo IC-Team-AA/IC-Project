@@ -60,8 +60,9 @@
     font-size: min(2.4vh, 3vw);
     color: var(--header_color);
     top: var(--top_forms_header);
-    left: var(--left_forms_header)
+    left: var(--left_forms_header);
 }
+
 
 .msg_header {
     width: 100%;
@@ -76,6 +77,8 @@
     display: flex;
     align-items: center;
 }
+
+
 
 .records_header {
     width: 100%;
@@ -270,7 +273,7 @@
 
 #projects_wrapper {
     width: 90%;
-    padding-top: 7vh;
+    margin-top: 7vh;
     height: 50%;
     justify-content: space-around;
     display: flex;

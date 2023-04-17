@@ -218,14 +218,32 @@ body {
     line-height: min(2.5vh, 1.4vw);
 }
 
-#additional_option a{
+#additional_option a {
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
     font-size: min(2.5vh, 1.4vw);
     line-height: min(2.5vh, 1.4vw);
-    text-decoration-line: underline;
+    text-decoration-line: none;
     color: var(--main_color);
+    position: relative;
+}
+
+#additional_option a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main_color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+#additional_option a:hover::after {
+    transform: scaleX(1);
 }
 
 #button_log_in_enter,
@@ -242,6 +260,14 @@ body {
     line-height: min(5vh, 3vw);
     color: var(--main_color);
     box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.4s ease-in-out, color 0.2s ease-in-out;
+}
+
+#button_log_in_enter:hover,
+#button_sign_up:hover {
+    background-color: #00bcd4;
+    color: black;
+    box-shadow: 0 0 5px 2px #000000;
 }
 
 #authorization_form_footer {
@@ -296,6 +322,7 @@ body {
     height: min(5.6vh, 2.8vw);
     width: min(5.6vh, 2.8vw);
 }
+
 #logo_facebook,
 #logo_google,
 #logo_vk,
