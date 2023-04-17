@@ -102,6 +102,7 @@
     font-size: min(2.4vh, 1.4vw);
     color: var(--header_color);
     width: 42%;
+    cursor: pointer;
     padding-left: 2.5%;
 }
 
@@ -214,7 +215,7 @@
     width: 95%;
     padding-bottom: 5%;
     font-weight: 600;
-    font-family: "Alegreya";
+    font-family: 'Oswald', sans-serif;;
     line-height: 1.05em
 }
 
@@ -735,6 +736,7 @@
     height: min(5vh, 3vw);
     background-color: #009aad;
     border-radius: 50%;
+    position: relative;
 }
 .online::before{
     content: "";
