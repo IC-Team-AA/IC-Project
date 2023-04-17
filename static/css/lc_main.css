@@ -18,14 +18,16 @@
     --difference_blue: calc((var(--color_progress_left_coef_blue) - var(--color_progress_right_coef_blue)) / 3);
 
     /*размеры шрифтов*/
+    --font_size_headers_multi: 1;
     --projects_font_size: min(12px, 1vw, 2vh);
     --font_size_records_text: min(14px, 1.1vw, 2.2vh);
     --text_font_size: min(16px, 1.2vw, 2.4vh);
     --preheader_font_size: min(18px, 1.3vw, 2.6vh);
     --font_size_records_title: min(20px, 1.4vw, 2.8vh);
-    ;
     --font_size_ntf_text_and_lessons_title: min(22px, 1.5vw, 3vh);
     --header_font_size: min(24px, 1.6vw, 3.2vh);
+    --font_size_big_vh: 2.4vh;
+    --font_size_big_vw: 1.4vw;
 
     /*Отспуты*/
     --top_forms_header: 3%;
@@ -55,70 +57,55 @@
 }
 
 /*------------------Стили для текста на странице-----------------------------*/
-
-.form_header {
-    font-size: min(2.4vh, 3vw);
-    color: var(--header_color);
-    top: var(--top_forms_header);
-    left: var(--left_forms_header);
-}
-
-
-.msg_header {
+.msg_header, .projects_header, .records_header, .lessons_header{
     width: 100%;
-    height: 12%;
     display: flex;
     align-items: center;
+}
+
+.lessons_header{
+    height: 30%;
+}
+
+.msg_header {
+    height: 12%;
 }
 
 .projects_header {
-    width: 100%;
     height: 27%;
-    display: flex;
-    align-items: center;
 }
-
-
 
 .records_header {
-    width: 100%;
     height: 13%;
-    display: flex;
-    align-items: center;
 }
 
-.form_header_lessons {
-    font-size: min(2.4vh, 1.4vw);
+.lessons_header_title, .form_header_msg, .projects_header_title,
+.form_header_ntf, .form_header_records{
+    font-size: min(calc(var(--font_size_big_vh) * var(--font_size_headers_multi)),
+    calc(var(--font_size_big_vw) * var(--font_size_headers_multi)));
     color: var(--header_color);
-    top: 7%;
-    left: 3%;
+}
+
+.lessons_header_title {
+    padding-left: 0.5em;
 }
 
 .form_header_msg {
-    font-size: min(2.4vh, 1.4vw);
-    color: var(--header_color);
     width: 25%;
     padding-left: 1.5%;
 }
 
-.form_header_projects {
-    font-size: min(2.4vh, 1.4vw);
-    color: var(--header_color);
+.projects_header_title {
     width: 42%;
-    cursor: pointer;
     padding-left: 2.5%;
 }
 
 .form_header_ntf {
-    font-size: min(2.4vh, 1.4vw);
-    color: var(--header_color);
     top: 3%;
     left: 3%;
 }
 
 .form_header_records {
-    font-size: min(2.4vh, 1.4vw);
-    color: var(--header_color);
     width: 30%;
     padding-left: 3%;
 }
@@ -144,13 +131,13 @@
     color: var(--text_color)
 }
 
-.form_header_lessons,
+.lessons_header_title,
 .form_text,
 .form_header,
 .form_header_msg,
-.form_header_projects,
+.projects_header_title,
 .form_header_ntf,
-.form_header_records {
+.form_header_records, .lessons_header {
     z-index: 1;
     font-family: "Comfortaa";
     font-style: normal;
@@ -219,7 +206,7 @@
     padding-bottom: 5%;
     font-weight: 600;
     font-family: 'Oswald', sans-serif;;
-    line-height: 1.05em
+    line-height: 1.1em
 }
 
 #records_logo {
@@ -298,28 +285,6 @@
     padding-top: 0.5vh
 }
 
-#main_content>#ntf>img {
-    width: 100%;
-    height: 400px
-}
-
-#bg1,
-#main_content>#msg>img {
-    width: 100%;
-    height: 332px
-}
-
-#bg2,
-#main_content>#lessons>img {
-    width: 100%;
-    height: 164px
-}
-
-#bg2 {
-    position: absolute;
-    z-index: 0
-}
-
 #msg {
     grid-area: msg
 }
@@ -363,7 +328,7 @@
     left: 2px;
     width: 100%;
     height: 15%;
-    border-radius: 0 7%0 0
+    border-radius: 0 7% 0 0
 }
 
 #lessons_title_right_space {
@@ -741,6 +706,7 @@
     border-radius: 50%;
     position: relative;
 }
+
 .online::before{
     content: "";
     position: absolute;

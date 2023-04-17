@@ -1,0 +1,38 @@
+@media (max-width: 1279px) {
+    :root{
+    --font_size_headers_multi: 1.3;
+    --font_size_nav_multi: 1.5;
+    }
+    #main_page {
+        overflow: auto;
+    }
+    nav{
+        width: 20%;
+    }
+    #main_content {
+        width: 100%;
+        height: 200%;
+        padding: 4%;
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1.25fr 1fr 1.6fr 1.8fr 2fr;
+        gap: 4% 4%;
+        grid-auto-flow: row;
+        grid-template-areas: "progress progress" "lessons projects" "ntf ntf" "records records" "msg msg"
+    }
+    .lessons_header, .projects_header{
+        justify-content: center;
+    }
+    .lessons_header{
+        height: 24%;
+    }
+    .projects_header{
+        height: 24%;
+    }
+    .projects_header_title{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+}
