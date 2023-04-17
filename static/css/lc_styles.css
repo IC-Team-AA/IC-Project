@@ -4,6 +4,7 @@
     --background_menu_color: black;
 
     --header_height: 7vh;
+    --font_size_nav_multi: 1;
 
     --IC_logo_width: 3.5vw;
     --IC_logo_ml: 2vw;
@@ -128,7 +129,7 @@ nav {
     font-family: "Comfortaa";
     font-style: normal;
     font-weight: 400;
-    font-size: var(--nav_menu_point_font_size);
+    font-size: calc(var(--nav_menu_point_font_size) * var(--font_size_nav_multi));
     line-height: var(--nav_menu_line_height);
     flex: initial
 }
