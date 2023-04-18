@@ -159,6 +159,7 @@ body {
 .input_with_logo {
     box-sizing: border-box;
     display: flex;
+    align-items: center;
 }
 
 .input_with_logo input::placeholder{
@@ -195,7 +196,6 @@ body {
     height: 6vh;
     border-radius: 0 20px 20px 0;
     box-sizing: border-box;
-    padding-top: 1vh;
     font-size: min(3.5vh, 2vw);
     padding-left: 0.5vw;
 }

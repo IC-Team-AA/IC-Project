@@ -26,8 +26,10 @@
     --font_size_records_title: min(20px, 1.4vw, 2.8vh);
     --font_size_ntf_text_and_lessons_title: min(22px, 1.5vw, 3vh);
     --header_font_size: min(24px, 1.6vw, 3.2vh);
-    --font_size_big_vh: 2.4vh;
-    --font_size_big_vw: 1.4vw;
+    --font_size_big: min(2.4vh, 1.4vw);
+    --font_size_medium: min(2.2vh, 1.2vw);
+    --font_size_little: min(2vh, 1vw);
+    --font_size_extra_small: min(1.6vh, 0.8vw);
 
     /*Отспуты*/
     --top_forms_header: 3%;
@@ -57,7 +59,7 @@
 }
 
 /*------------------Стили для текста на странице-----------------------------*/
-.msg_header, .projects_header, .records_header, .lessons_header{
+.msg_header, .projects_header, .records_header, .lessons_header, .ntf_header{
     width: 100%;
     display: flex;
     align-items: center;
@@ -79,18 +81,24 @@
     height: 13%;
 }
 
-.lessons_header_title, .form_header_msg, .projects_header_title,
-.form_header_ntf, .form_header_records{
-    font-size: min(calc(var(--font_size_big_vh) * var(--font_size_headers_multi)),
-    calc(var(--font_size_big_vw) * var(--font_size_headers_multi)));
-    color: var(--header_color);
+.ntf_header{
+    height: 13%;
 }
 
-.lessons_header_title {
+.lessons_header_title, .msg_header_title, .projects_header_title,
+.ntf_header_title, .records_header_title{
+    font-size: calc(var(--font_size_big) * var(--font_size_headers_multi));
+    color: var(--header_color);
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.lessons_header_title, .ntf_header_title{
     padding-left: 0.5em;
 }
 
-.form_header_msg {
+.msg_header_title {
     width: 25%;
     padding-left: 1.5%;
 }
@@ -100,12 +108,7 @@
     padding-left: 2.5%;
 }
 
-.form_header_ntf {
-    top: 3%;
-    left: 3%;
-}
-
-.form_header_records {
+.records_header_title {
     width: 30%;
     padding-left: 3%;
 }
@@ -119,7 +122,7 @@
 }
 
 .form_preheader_records {
-    font-size: min(2vh, 1vw);
+    font-size: calc(var(--font_size_little) * var(--font_size_headers_multi));
     color: var(--header_color);
     width: 60%;
     text-align: center;
@@ -127,17 +130,17 @@
 }
 
 .form_text {
-    font-size: var(--text_font_size);
+    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
     color: var(--text_color)
 }
 
 .lessons_header_title,
 .form_text,
 .form_header,
-.form_header_msg,
+.msg_header_title,
 .projects_header_title,
-.form_header_ntf,
-.form_header_records, .lessons_header {
+.ntf_header,
+.records_header_title, .lessons_header {
     z-index: 1;
     font-family: "Comfortaa";
     font-style: normal;
@@ -176,14 +179,15 @@
 
 #lessons_title {
     top: var(--top_lessons_title);
-    font-size: min(2.5vh, 1.3vw);
-    text-decoration: underline
+    font-weight: 700;
+    font-size: calc(var(--font_size_big) * var(--font_size_headers_multi));
+    text-decoration: underline;
 }
 
 #lessons_text {
     top: var(--top_lessons_text);
-    font-size: min(1.7vh, 1vw);
-    line-height: 140%;
+    font-size: calc(var(--font_size_little) * var(--font_size_headers_multi));
+    line-height: 115%;
 }
 
 #forms_preheader {
@@ -201,12 +205,12 @@
 
 #ntf_text {
     position: relative;
-    font-size: var(--font_size_ntf_text_and_lessons_title);
+    font-size: calc(var(--font_size_big) * var(--font_size_headers_multi));
     width: 95%;
     padding-bottom: 5%;
     font-weight: 600;
     font-family: 'Oswald', sans-serif;;
-    line-height: 1.1em
+    line-height: 1.2em
 }
 
 #records_logo {
@@ -281,7 +285,7 @@
 }
 
 .projects_text {
-    font-size: min(1.5vh, 0.8vw);
+    font-size: calc(var(--font_size_extra_small) * var(--font_size_headers_multi));
     padding-top: 0.5vh
 }
 
@@ -363,8 +367,8 @@
 
 #progress_main_title {
     position: absolute;
-    top: 4%;
-    left: 15%;
+    top: 1.6vh;
+    left: 16%;
     background: linear-gradient(45deg, #009aad 33%, #2aabba 66%, #55bcc8)
 }
 
@@ -643,29 +647,25 @@
 #chat_input_form {
     position: relative;
     width: 70%;
-}
-
-#chat_input_form::after {
-    content: "";
-    position: absolute;
-    top: 15%;
-    left: 2%;
-    width: 1.5vh;
-    height: 1.5vh;
-    background-image: url("/static/img/msg/smile.png");
-    background-size: cover;
-    display: block;
-    z-index: 1;
+    display: flex;
+    align-items: center;
 }
 
 #chat_input_form input {
     width: 100%;
     height: 100%;
-    padding: 0 0 0 10%;
+    padding: 1% 0 0 10%;
     border: 1px solid black;
     border-radius: 5px;
     font-size: min(1.5vh, 0.9vw);
-    position: relative;
+}
+
+.smile{
+    position: absolute;
+    width: min(1.5vh, 1vw);
+    height: min(1.5vh, 1vw);
+    left: 2%;
+    z-index: 2;
 }
 
 #chat_send_button {
