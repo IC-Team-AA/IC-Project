@@ -85,8 +85,8 @@
     height: 13%;
 }
 
-.lessons_header_title, .form_header_msg, .projects_header_title,
-.ntf_header_title, .form_header_records{
+.lessons_header_title, .msg_header_title, .projects_header_title,
+.ntf_header_title, .records_header_title{
     font-size: calc(var(--font_size_big) * var(--font_size_headers_multi));
     color: var(--header_color);
     height: 100%;
@@ -98,7 +98,7 @@
     padding-left: 0.5em;
 }
 
-.form_header_msg {
+.msg_header_title {
     width: 25%;
     padding-left: 1.5%;
 }
@@ -108,7 +108,7 @@
     padding-left: 2.5%;
 }
 
-.form_header_records {
+.records_header_title {
     width: 30%;
     padding-left: 3%;
 }
@@ -130,17 +130,17 @@
 }
 
 .form_text {
-    font-size: var(--text_font_size);
+    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
     color: var(--text_color)
 }
 
 .lessons_header_title,
 .form_text,
 .form_header,
-.form_header_msg,
+.msg_header_title,
 .projects_header_title,
 .ntf_header,
-.form_header_records, .lessons_header {
+.records_header_title, .lessons_header {
     z-index: 1;
     font-family: "Comfortaa";
     font-style: normal;
@@ -367,8 +367,8 @@
 
 #progress_main_title {
     position: absolute;
-    top: 4%;
-    left: 15%;
+    top: 1.6vh;
+    left: 16%;
     background: linear-gradient(45deg, #009aad 33%, #2aabba 66%, #55bcc8)
 }
 
