@@ -19,12 +19,7 @@
 
     /*размеры шрифтов*/
     --font_size_headers_multi: 1;
-    --projects_font_size: min(12px, 1vw, 2vh);
-    --font_size_records_text: min(14px, 1.1vw, 2.2vh);
-    --text_font_size: min(16px, 1.2vw, 2.4vh);
-    --preheader_font_size: min(18px, 1.3vw, 2.6vh);
-    --font_size_records_title: min(20px, 1.4vw, 2.8vh);
-    --font_size_ntf_text_and_lessons_title: min(22px, 1.5vw, 3vh);
+    --font_size_records_text_multi: 1;
     --header_font_size: min(24px, 1.6vw, 3.2vh);
     --font_size_big: min(2.4vh, 1.4vw);
     --font_size_medium: min(2.2vh, 1.2vw);
@@ -44,8 +39,9 @@
     --top_ntf_text: 15%;
     --left_ntf_text: 5%;
 
-    --top_records_video_and_title: 30%;
+    --top_records_video_and_title: 28%;
     --left_records_video: 5%;
+    --heigth_video_description: 2.6vw;
     --top_records_text: 40%;
     --top_records_date: 54%;
     --left_records_description: 45%;
@@ -59,7 +55,66 @@
 }
 
 /*------------------Стили для текста на странице-----------------------------*/
-.msg_header, .projects_header, .records_header, .lessons_header, .ntf_header{
+
+#main_page {
+    flex: 1;
+    background-color: var(--background_main_page);
+    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
+    color: var(--text_color);
+    font-family: "Comfortaa";
+    font-style: normal;
+    font-weight: 400;
+    display: flex
+}
+
+#main_content {
+    height: 87%;
+    width: 100%;
+    padding: 4%;
+    display: grid;
+    grid-template-columns: 1fr 1.7fr 1.35fr;
+    grid-template-rows: 1.25fr 1fr 2fr;
+    gap: 4% 4%;
+    grid-auto-flow: row;
+    grid-template-areas: "progress progress ntf" "lessons projects ntf" "msg msg records"
+}
+
+#main_content>* {
+    background-position: none;
+    position: relative;
+    object-fit: inherit;
+    background-repeat: no-repeat;
+}
+
+#main_content>div:not(#progress)>* {
+    position: absolute
+}
+
+#projects {
+    grid-area: projects
+}
+
+#msg {
+    grid-area: msg
+}
+
+#progress {
+    grid-area: progress
+}
+
+#ntf {
+    grid-area: ntf
+}
+
+#lessons {
+    grid-area: lessons
+}
+
+#records {
+    grid-area: records
+}
+
+.msg_header, .projects_header, .records_header, .lessons_header, .ntf_header, .records_preheader{
     width: 100%;
     display: flex;
     align-items: center;
@@ -85,11 +140,18 @@
     height: 13%;
 }
 
+.records_preheader{
+    height: 12%;
+    top: 12%;
+}
+
 .lessons_header_title, .msg_header_title, .projects_header_title,
-.ntf_header_title, .records_header_title{
+.ntf_header_title, .records_header_title, .records_preheader_title_60,
+.records_preheader_title {
     font-size: calc(var(--font_size_big) * var(--font_size_headers_multi));
     color: var(--header_color);
     height: 100%;
+    z-index: 1;
     display: flex;
     align-items: center;
 }
@@ -113,67 +175,24 @@
     padding-left: 3%;
 }
 
-.records_preheader {
-    width: 100%;
-    height: 12%;
-    display: flex;
-    align-items: center;
-    top: 12%;
-}
-
-.form_preheader_records {
-    font-size: calc(var(--font_size_little) * var(--font_size_headers_multi));
-    color: var(--header_color);
-    width: 60%;
-    text-align: center;
-    z-index: 1;
-}
-
-.form_text {
-    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
-    color: var(--text_color)
-}
-
-.lessons_header_title,
-.form_text,
-.form_header,
-.msg_header_title,
-.projects_header_title,
-.ntf_header,
-.records_header_title, .lessons_header {
-    z-index: 1;
-    font-family: "Comfortaa";
-    font-style: normal;
-    font-weight: 400
-}
-
-#main_page {
-    flex: 1;
-    background-color: var(--background_main_page);
-    display: flex
-}
-
-#main_content {
-    height: 87%;
-    width: 100%;
-    padding: 4%;
-    display: grid;
-    grid-template-columns: 1fr 1.7fr 1.35fr;
-    grid-template-rows: 1.25fr 1fr 2fr;
-    gap: 4% 4%;
-    grid-auto-flow: row;
-    grid-template-areas: "progress progress ntf" "lessons projects ntf" "msg msg records"
-}
-
-#main_content>* {
-    background-position: none;
+.records_preheader_title, .records_preheader_title_60{
+    width:40%;
+    justify-content: center;
     position: relative;
-    object-fit: inherit;
-    background-repeat: no-repeat;
 }
+
+.records_preheader_title_60{
+    width:60%;
+    padding-top: 1%;
+    font-size: calc(var(--font_size_little) * var(--font_size_headers_multi));
+}
+
+
+
 
 .lessons_text {
     width: 96%;
+    z-index: 1;
     text-align: right
 }
 
@@ -190,12 +209,6 @@
     line-height: 115%;
 }
 
-#forms_preheader {
-    top: var(--top_forms_preheader);
-    left: var(--left_forms_preheader);
-    font-size: var(--preheader_font_size)
-}
-
 #ntf_wrapper {
     width: 94%;
     height: 85%;
@@ -209,6 +222,7 @@
     width: 95%;
     padding-bottom: 5%;
     font-weight: 600;
+    z-index: 1;
     font-family: 'Oswald', sans-serif;;
     line-height: 1.2em
 }
@@ -218,53 +232,59 @@
     z-index: 1;
 }
 
-.records_video {
-    width: 35%;
-    height: 28%;
+.records_video, .records_video2 {
+    width: 100%;
+    height: 35%;
+    display: flex;
     top: var(--top_records_video_and_title);
-    left: var(--left_records_video);
     z-index: 1;
 }
 
-#records_title_2,
-#records_video2 {
-    top: calc(var(--top_records_video_and_title) + 34%)
+.records_video2{
+    top: 62%;
 }
 
-.records_description {
-    left: var(--left_records_description);
-    font-size: min(0.8vw, 1.6vh);
-    width: 50%;
+.video_description{
+    width: 57%;
+    padding-left: 3%;
+    display: flex;
+    align-items: center;
     z-index: 1;
-    text-align: left;
-    font-weight: 600
 }
 
-.records_title {
-    font-size: var(--font_size_records_title);
+.video_photo{
+    width: 37%;
+    padding-left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video_img{
+    width: 90%;
+    object-fit: cover;
+}
+
+.records_title{
+    font-size: calc(var(--font_size_little) * var(--font_size_records_text_multi));
     font-weight: 700;
-    top: var(--top_records_video_and_title)
 }
 
-.records_text {
+.records_text, .records_date{
+    font-size: calc(var(--font_size_extra_small) * var(--font_size_records_text_multi));
     line-height: 120%;
-    top: var(--top_records_text)
+    height: var(--heigth_video_description);
+    display: flex;
+    align-items: center;
 }
 
-#records_text_2 {
-    top: calc(var(--top_records_text) + 34%)
-}
-
-#records_date {
-    top: var(--top_records_date)
-}
-
-#records_date_2 {
-    top: calc(var(--top_records_date) + 34%)
+.records_date{
+    height: 25%;
 }
 
 #projects_wrapper {
     width: 90%;
+    padding: 0 5%;
     margin-top: 7vh;
     height: 50%;
     justify-content: space-around;
@@ -289,73 +309,6 @@
     padding-top: 0.5vh
 }
 
-#msg {
-    grid-area: msg
-}
-
-#progress {
-    grid-area: progress
-}
-
-#ntf {
-    grid-area: ntf
-}
-
-#lessons {
-    grid-area: lessons
-}
-
-#lessons_title_space {
-    position: absolute;
-    top: -2%;
-    left: 0;
-    width: 102%;
-    height: 33%;
-    background-color: var(--background_main_page);
-    z-index: 2
-}
-
-#lessons_title_big,
-#lessons_title_mini {
-    position: absolute;
-    top: 0;
-    left: -2px;
-    width: 85%;
-    height: 33%;
-    background-color: #000;
-    border-radius: 30px 50px 0 0;
-    z-index: 3
-}
-
-#lessons_title_mini {
-    top: 18%;
-    left: 2px;
-    width: 100%;
-    height: 15%;
-    border-radius: 0 7% 0 0
-}
-
-#lessons_title_right_space {
-    position: absolute;
-    top: 0;
-    left: 79%;
-    width: 22%;
-    height: 25%;
-    background-color: var(--background_main_page);
-    border-radius: 0 0 0 50px;
-    z-index: 4
-}
-
-#projects {
-    display: flex;
-    justify-content: center;
-    grid-area: projects
-}
-
-#records {
-    grid-area: records
-}
-
 #progress {
     background-image: url(/static/img/progess_background.png);
     background-size: cover;
@@ -365,17 +318,19 @@
     position: relative
 }
 
-#progress_main_title {
+#result_progress, #progress_main_title{
     position: absolute;
+}
+
+#progress_main_title {
     top: 1.6vh;
     left: 16%;
     background: linear-gradient(45deg, #009aad 33%, #2aabba 66%, #55bcc8)
 }
 
 #result_progress {
-    position: absolute;
     top: 87%;
-    left: 37%;
+    left: 32%;
     background: linear-gradient(45deg, #55bcc8 33%, #aadee3 66%, #fff)
 }
 
@@ -465,14 +420,6 @@
     border-radius: 8px
 }
 
-#main_content>div {
-    position: relative
-}
-
-#main_content>div:not(#progress)>* {
-    position: absolute
-}
-
 #friends_block {
     width: 100%;
     height: 30vh;
@@ -546,7 +493,6 @@
 #interlocutor_avatar:hover::before {
     opacity: 1;
 }
-
 
 #interlocutor {
     font-family: 'Comfortaa';

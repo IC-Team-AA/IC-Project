@@ -2,6 +2,8 @@
     :root{
     --font_size_headers_multi: 1.3;
     --font_size_nav_multi: 1.5;
+    --font_size_records_text_multi: 1.5;
+    --heigth_video_description: 4.6vw;
     --top_lessons_title: 30%;
     --top_lessons_text: 46%; 
     }
@@ -63,10 +65,17 @@
     #projects_wrapper{
         height: 70%;
         width: 100%;
+        padding: 0;
         justify-content: center;
         align-items: center;
     }
     #ntf_text{
         padding-bottom: 2%;
+    }
+    .records_preheader{
+        top:13%;
+    }
+    #records_logo{
+        width: min(4vh, 2.5vw);
     }
 }
