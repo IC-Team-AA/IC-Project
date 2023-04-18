@@ -31,7 +31,6 @@ function setFormSize() {
                 let oneImg = images[0];
                 oneImg.style.width = oneDivWithImages.offsetWidth + 'px';
                 oneImg.style.height = oneDivWithImages.offsetHeight + 'px';
-                console.log(oneImg, oneDivWithImages.offsetWidth, oneDivWithImages.offsetHeight);
             }
         }
     );
