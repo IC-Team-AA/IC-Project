@@ -78,4 +78,17 @@
     #records_logo{
         width: min(4vh, 2.5vw);
     }
+    #msg_title{
+        height: 11%;
+    }
+    #friends_block{
+        height: 77%;
+        top: 23%;
+    }
+    #chat_input_form{
+        height: 50%;
+    }
+    #chat_input_form input{
+        padding-left: 15%;
+    }
 }

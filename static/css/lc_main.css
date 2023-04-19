@@ -26,6 +26,10 @@
     --font_size_little: min(2vh, 1vw);
     --font_size_extra_small: min(1.6vh, 0.8vw);
 
+    /*Размеры фотографий*/
+    --size-friend-avatar: min(5vh, 3vw);
+    --size-input-form-chat: min(2.5vh, 1.5vw);
+
     /*Отспуты*/
     --top_forms_header: 3%;
     --left_forms_header: 0.7em;
@@ -186,9 +190,6 @@
     padding-top: 1%;
     font-size: calc(var(--font_size_little) * var(--font_size_headers_multi));
 }
-
-
-
 
 .lessons_text {
     width: 96%;
@@ -422,8 +423,9 @@
 
 #friends_block {
     width: 100%;
-    height: 30vh;
-    top: 11%;
+    height: 27vh;
+    top: 24%;
+    z-index: 1;
 }
 
 #friends_block>* {
@@ -441,15 +443,17 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 500;
-    font-size: min(2.2vh, 1.2vw);
-    line-height: min(2.2vh, 1.2vw);
+    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));;
+    line-height: calc(var(--font_size_medium) * var(--font_size_headers_multi));
     color: var(--header_color);
 }
 
 #msg_title {
     width: 100%;
-    height: 15%;
+    height: 12%;
+    top: 12%;
     display: flex;
+    z-index: 1;
 }
 
 #chat_block_title {
@@ -465,8 +469,8 @@
     position: relative;
     top: 0.7em;
     left: 0.5em;
-    width: min(5vh, 3vw);
-    height: min(5vh, 3vw);
+    width: calc(var(--size-friend-avatar) * var(--font_size_headers_multi));
+    height: calc(var(--size-friend-avatar) * var(--font_size_headers_multi));;
     border-radius: 50%;
     border: 3px solid white;
     transition: border-color 0.5s ease-in-out;
@@ -498,8 +502,8 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 500;
-    font-size: min(2.2vh, 1.2vw);
-    line-height: min(2.2vh, 1.2vw);
+    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
+    line-height: calc(var(--font_size_medium) * var(--font_size_headers_multi));
     color: var(--header_color);
     width: 35%;
 }
@@ -508,8 +512,8 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 500;
-    font-size: min(1.6vh, 1vw);
-    line-height: min(2vh, 1vw);
+    font-size: calc(var(--font_size_extra_small) * var(--font_size_headers_multi));;
+    line-height: calc(var(--font_size_little) * var(--font_size_headers_multi));
     color: #5E5E5E;
     text-align: center;
 }
@@ -533,7 +537,7 @@
 
 #msg_content_block {
     box-sizing: border-box;
-    height: 88%;
+    height: 99%;
     width: 100%;
     display: flex;
 }
@@ -559,7 +563,7 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    font-size: min(1vw, 1.6vh);
+    font-size: calc(var(--font_size_extra_small) * var(--font_size_records_text_multi));;
     line-height: 1.3em;
     text-align: center;
     color: #000000;
@@ -574,9 +578,10 @@
     width: 99%;
     height: calc(100% - var(--chat_height) - 1%);
     display: flex;
+    align-items: center;
     justify-content: space-around;
     position: relative;
-    padding: 4% 4% 1% 1%;
+    padding: 2% 4% 1% 1%;
 }
 
 #chat_smile_logo,
@@ -586,13 +591,14 @@
 }
 
 #chat_paperclip_logo {
-    width: min(2.5vh, 1.5vw);
-    height: min(2.5vh, 1.5vw);
+    width: calc(var(--size-input-form-chat) * var(--font_size_headers_multi));
+    height: calc(var(--size-input-form-chat) * var(--font_size_headers_multi));
 }
 
 #chat_input_form {
     position: relative;
     width: 70%;
+    height: calc(var(--size-input-form-chat) * var(--font_size_headers_multi));
     display: flex;
     align-items: center;
 }
@@ -603,20 +609,20 @@
     padding: 1% 0 0 10%;
     border: 1px solid black;
     border-radius: 5px;
-    font-size: min(1.5vh, 0.9vw);
+    font-size: calc(var(--font_size_extra_small) * var(--font_size_records_text_multi));
 }
 
 .smile{
     position: absolute;
-    width: min(1.5vh, 1vw);
-    height: min(1.5vh, 1vw);
+    width: calc(var(--size-input-form-chat));
+    height: calc(var(--size-input-form-chat));
     left: 2%;
     z-index: 2;
 }
 
 #chat_send_button {
-    width: min(2.5vh, 1.5vw);
-    height: min(2.5vh, 1.5vw);
+    width: calc(var(--size-input-form-chat) * var(--font_size_headers_multi));
+    height: calc(var(--size-input-form-chat) * var(--font_size_headers_multi));
 }
 
 #friends_block_content {
@@ -682,25 +688,19 @@
     background-image: url("/static/img/msg/mobile.png");
 }
 
-.friend_fullname {
-    width: 50%;
+.friend_fullname, .friend_course{
     text-align: center;
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 600;
-    font-size: min(2vh, 1vw);
-    line-height: min(2vh, 1vw);
+    font-size: calc(var(--font_size_little) * var(--font_size_records_text_multi));
+    line-height: calc(var(--font_size_little) * var(--font_size_records_text_multi));
+    width: 50%;
     color: #000;
 }
 
 .friend_course {
     width: 30%;
-    text-align: center;
-    font-family: 'Comfortaa';
-    font-style: normal;
-    font-weight: 600;
-    font-size: min(2vh, 1vw);
-    line-height: min(2vh, 1vw);
     color: #5E5E5E;
 }
 
