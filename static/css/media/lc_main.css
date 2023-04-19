@@ -15,11 +15,11 @@
     }
     #main_content {
         width: 100%;
-        height: 200%;
+        height: 140%;
         padding: 4%;
         display: grid;
         grid-template-columns: 1fr 1.5fr;
-        grid-template-rows: 1.25fr 0.8fr 1.6fr 1.8fr;
+        grid-template-rows: 0.8fr 0.6fr 1fr 1.2fr;
         gap: 3vw 4.5%;
         grid-auto-flow: row;
         grid-template-areas: "progress progress" "lessons projects" "ntf records" "msg msg"
@@ -66,6 +66,7 @@
         height: 70%;
         width: 100%;
         padding: 0;
+        margin-top: 4vh;
         justify-content: center;
         align-items: center;
     }
@@ -88,7 +89,7 @@
     #chat_input_form{
         height: 50%;
     }
-    #chat_input_form input{
-        padding-left: 15%;
+    .video_img{
+        width: 80%;
     }
 }

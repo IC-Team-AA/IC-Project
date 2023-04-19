@@ -29,6 +29,7 @@
     /*Размеры фотографий*/
     --size-friend-avatar: min(5vh, 3vw);
     --size-input-form-chat: min(2.5vh, 1.5vw);
+    --size-smile:min(2vh, 1vw);
 
     /*Отспуты*/
     --top_forms_header: 3%;
@@ -219,7 +220,7 @@
 
 #ntf_text {
     position: relative;
-    font-size: calc(var(--font_size_big) * var(--font_size_headers_multi));
+    font-size: calc(var(--font_size_big));
     width: 95%;
     padding-bottom: 5%;
     font-weight: 600;
@@ -325,6 +326,7 @@
 
 #progress_main_title {
     top: 1.6vh;
+    font-size: calc(var(--font_size_medium) * var(--font_size_records_text_multi));
     left: 16%;
     background: linear-gradient(45deg, #009aad 33%, #2aabba 66%, #55bcc8)
 }
@@ -332,6 +334,8 @@
 #result_progress {
     top: 87%;
     left: 32%;
+    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
+    line-height: calc(var(--font_size_big) * var(--font_size_headers_multi));;
     background: linear-gradient(45deg, #55bcc8 33%, #aadee3 66%, #fff)
 }
 
@@ -614,8 +618,8 @@
 
 .smile{
     position: absolute;
-    width: calc(var(--size-input-form-chat));
-    height: calc(var(--size-input-form-chat));
+    width: calc(var(--size-smile) * var(--font_size_headers_multi));
+    height: calc(var(--size-smile) * var(--font_size_headers_multi));
     left: 2%;
     z-index: 2;
 }
