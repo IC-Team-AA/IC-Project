@@ -64,7 +64,7 @@
 #main_page {
     flex: 1;
     background-color: var(--background_main_page);
-    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_medium) * var(--font_size_headers_multi)), 14px);
     color: var(--text_color);
     font-family: "Comfortaa";
     font-style: normal;
@@ -153,7 +153,7 @@
 .lessons_header_title, .msg_header_title, .projects_header_title,
 .ntf_header_title, .records_header_title, .records_preheader_title_60,
 .records_preheader_title {
-    font-size: calc(var(--font_size_big) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_big) * var(--font_size_headers_multi)), 16px);
     color: var(--header_color);
     height: 100%;
     z-index: 1;
@@ -189,7 +189,7 @@
 .records_preheader_title_60{
     width:60%;
     padding-top: 1%;
-    font-size: calc(var(--font_size_little) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 12px);
 }
 
 .lessons_text {
@@ -201,14 +201,39 @@
 #lessons_title {
     top: var(--top_lessons_title);
     font-weight: 700;
-    font-size: calc(var(--font_size_big) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_big) * var(--font_size_headers_multi)), 16px);
     text-decoration: underline;
 }
 
 #lessons_text {
     top: var(--top_lessons_text);
-    font-size: calc(var(--font_size_little) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 12px);
     line-height: 115%;
+}
+
+.lessons_cards{
+    display: none;
+    width: 100%;
+    top:24%;
+    height: 66%;
+    justify-content: space-around;
+    padding-top: 2%;
+}
+
+.lessons_card, .lessons_card_active{
+    width: 18%;
+    height: 75%;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 1;
+    padding: 1%;
+    line-height: 130%;
+    font-size: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 10px);
+}
+
+.lessons_card_active{
+    font-weight: 700;
+    box-shadow: 0 0 5px #009aad;
 }
 
 #ntf_wrapper {
@@ -220,7 +245,7 @@
 
 #ntf_text {
     position: relative;
-    font-size: calc(var(--font_size_big));
+    font-size: max(var(--font_size_big), 16px);
     width: 95%;
     padding-bottom: 5%;
     font-weight: 600;
@@ -234,9 +259,14 @@
     z-index: 1;
 }
 
+.records_content{
+    top: 26%;
+    height: 74%;
+}
+
 .records_video, .records_video2 {
     width: 100%;
-    height: 35%;
+    height: 50%;
     display: flex;
     top: var(--top_records_video_and_title);
     z-index: 1;
@@ -261,19 +291,20 @@
     justify-content: center;
     align-items: center;
 }
-
+.video_description_wrapper,
 .video_img{
-    width: 90%;
+    width: max(90%, 120px);
     object-fit: cover;
+    z-index: 1;
 }
 
 .records_title{
-    font-size: calc(var(--font_size_little) * var(--font_size_records_text_multi));
+    font-size: max(calc(var(--font_size_little) * var(--font_size_records_text_multi)), 16px);
     font-weight: 700;
 }
 
 .records_text, .records_date{
-    font-size: calc(var(--font_size_extra_small) * var(--font_size_records_text_multi));
+    font-size: max(calc(var(--font_size_extra_small) * var(--font_size_records_text_multi)), 12px);
     line-height: 120%;
     height: var(--heigth_video_description);
     display: flex;
@@ -287,7 +318,7 @@
 #projects_wrapper {
     width: 90%;
     padding: 0 5%;
-    margin-top: 7vh;
+    margin-top: 6vh;
     height: 50%;
     justify-content: space-around;
     display: flex;
@@ -307,7 +338,7 @@
 }
 
 .projects_text {
-    font-size: calc(var(--font_size_extra_small) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_extra_small) * var(--font_size_records_text_multi)), 11px);
     padding-top: 0.5vh
 }
 
@@ -447,8 +478,8 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 500;
-    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));;
-    line-height: calc(var(--font_size_medium) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 14px);
+    line-height: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 14px);
     color: var(--header_color);
 }
 
@@ -473,8 +504,8 @@
     position: relative;
     top: 0.7em;
     left: 0.5em;
-    width: calc(var(--size-friend-avatar) * var(--font_size_headers_multi));
-    height: calc(var(--size-friend-avatar) * var(--font_size_headers_multi));;
+    width: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 45px);
+    height: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 45px);
     border-radius: 50%;
     border: 3px solid white;
     transition: border-color 0.5s ease-in-out;
@@ -506,8 +537,8 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 500;
-    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
-    line-height: calc(var(--font_size_medium) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 14px);
+    line-height: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 14px);
     color: var(--header_color);
     width: 35%;
 }
@@ -516,8 +547,8 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 500;
-    font-size: calc(var(--font_size_extra_small) * var(--font_size_headers_multi));;
-    line-height: calc(var(--font_size_little) * var(--font_size_headers_multi));
+    font-size: max(calc(var(--font_size_extra_small) * var(--font_size_headers_multi)), 12px);
+    line-height: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 14px);
     color: #5E5E5E;
     text-align: center;
 }
@@ -541,7 +572,7 @@
 
 #msg_content_block {
     box-sizing: border-box;
-    height: 99%;
+    height: 98%;
     width: 100%;
     display: flex;
 }
@@ -567,7 +598,7 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 400;
-    font-size: calc(var(--font_size_extra_small) * var(--font_size_records_text_multi));;
+    font-size: max(calc(var(--font_size_extra_small) * var(--font_size_records_text_multi)), 14px);
     line-height: 1.3em;
     text-align: center;
     color: #000000;
@@ -651,13 +682,13 @@
 }
 
 .friend_infoline:hover {
-    box-shadow: 0 0 15px #009aad;
     border-radius: 50px;
+    box-shadow: 0 0 15px #009aad;
 }
 
 .friend_avatar {
-    width: min(5vh, 3vw);
-    height: min(5vh, 3vw);
+    width: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 50px);
+    height: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 50px);
     background-color: #009aad;
     border-radius: 50%;
     position: relative;
@@ -697,8 +728,8 @@
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: 600;
-    font-size: calc(var(--font_size_little) * var(--font_size_records_text_multi));
-    line-height: calc(var(--font_size_little) * var(--font_size_records_text_multi));
+    font-size: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 14px);
+    line-height: max(calc(var(--font_size_little) * var(--font_size_headers_multi)), 14px);
     width: 50%;
     color: #000;
 }
