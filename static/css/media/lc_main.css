@@ -597,39 +597,42 @@
     }
     #header_avatar{
         display: block;
-        position: fixed;
-        left: 45vw;
-        top: 15px;
+        content: "";
+        position: relative;
+        box-sizing: border-box;
+        top: 2vh;
+        left: 21vw;
+        margin: 0;
+        width: 30vw;
+        height: 60px;
+        background-color: #000;
+        border-radius: 0 0 50% 50%;
+        border: 3px solid #009aad;
+    }
+    #header_avatar::before{
+        content: "";
+        position: absolute;
+        background-color: #000;
+        top: -2vh;
+        left: -10vw;
+        width: 50vw;
+        height: 6.6vh;
+
+        
+    }
+    #header_avatar::after{
+        content: "";
+        display: block;
+        position: relative;
+        left: 9vw;
         background-image: url(/static/img/user_avatar.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center center;
         border-radius: 50%;
-        width: 60px;
-        height: 60px;
+        width: 12vw;
+        height: 12vw;
         z-index: 2;
-    }
-    #header_avatar::before{
-        content: "";
-        position: absolute;
-        top: -5px;
-        left: -5px;
-        width: calc(100% + 10px);
-        height: calc(100% + 10px);
-        border-radius: 50%;
-        border: 3px solid #009aad;
-        z-index: 1;
-    }
-    #header_avatar::after{
-        content: "";
-        position: absolute;
-        background-color: #000;
-        top: -5px;
-        left: -5px;
-        width: calc(100% + 10px);
-        height: calc(100% + 10px);
-        border: 10px solid #000;
-        z-index: 0;
     }
 
     header{
