@@ -7,6 +7,7 @@
 
 @media (max-width: 1279px) {
     :root{
+    --font_size_ntf_multi: 1.2;
     --font_size_headers_multi: 1.3;
     --font_size_nav_multi: 1.5;
     --font_size_records_text_multi: 1.5;
@@ -99,9 +100,6 @@
         padding: 0;
         justify-content: center;
     }
-    #ntf_text{
-        padding-bottom: 2%;
-    }
     #records_preheader{
         top:16%;
     }
@@ -144,8 +142,9 @@
         left: 7%;
     }
     #ntf_text{
-        font-size: max(var(--font_size_medium), 14px);
+        font-size: max(var(--font_size_medium), 11px);
         height: 22%;
+        padding-bottom: 2%;
     }
 }
 
@@ -185,7 +184,7 @@
         width: 100%;
     }
     #ntf_text {
-        font-size: max(calc(var(--font_size_medium) * var(--font_size_headers_multi)), 11px);
+        font-size: max(calc(var(--font_size_little) * var(--font_size_ntf_multi)), 10px);
         padding: 0;
         height: 25%;
     }
@@ -316,6 +315,7 @@
         --IC_logo_font_size: min(3vh, 5vw);
         --top_progress_text: 47vw;
         --font_size_main: 4vw;
+        --font_size_main2: 3vw;
     }
     #main_page{
         height: 93vh;
@@ -474,40 +474,6 @@
     #mark_progress::before{
         content: "Общая оценка";
     }
-    
-    #areas_progress>::after,
-    #point_progress>::before {
-        position: absolute;
-        content: "";
-        border-style: solid;
-        border-width: 2px
-    }
-    
-    #point_progress {
-        position: absolute;
-        font-size: max(calc(var(--font_size_extra_small) * var(--font_size_headers_multi)), 9px);
-        top: 65%;
-        left: 0;
-        height: 20%
-    }
-    
-    #point_progress>* {
-        width: 25%;
-        height: 50%;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center
-    }
-    
-    #point_progress>::before {
-        left: 15%;
-        z-index: 0;
-        background-color: #000;
-        width: 70%;
-        height: 140%;
-        border-radius: 8px
-    }
 
     #lessons_header, #projects_header, #ntf_header{
         height: 14%;
@@ -516,7 +482,7 @@
         height: 10%;
     }
 
-    #lessons_header_block, .projects_header_title, #ntf_header_block{
+    #lessons_header_block, .projects_header_title, #ntf_header_block, .records_header_title, .msg_header_title{
         z-index: 1;
         padding: 0;
         font-size: var(--font_size_main);
@@ -566,9 +532,108 @@
         bottom: 3%;
     }
     #ntf_text{
-        font-size: max(calc(var(--font_size_main) * 1.3), 20px);
+        font-size: max(calc(var(--font_size_main)), 15px);
     }
     .records_content{
-        
+        display: block;
+        top: 12%;
+        width: 100%;
+    }
+    .records_video, .records_video2{
+        width: 100%;
+    }
+    .video_photo{
+        padding: 0;
+    }
+    .video_img{
+        width: 50%;
+    }
+    .video_description_wrapper{
+        margin-top: 1%;
+        padding-left: 20%;
+        padding-right: 5%;
+        position: relative;
+    }
+    .records_title{
+        font-size: var(--font_size_main);
+    }
+    .records_text_mobile, .records_date{
+        font-size: var(--font_size_main2);
+        font-weight: 700;
+    }
+    .records_date{
+        display: flex;
+        justify-content: end;
+        padding-right: 7%;
+    }
+    #msg_header{
+        height: 11%;
+    }
+    #msg_title{
+        height: 6%;
+    }
+    .msg_header_title{
+        width: 100%;
+    }
+    .msg_header_title::after{
+        content: "";
+        position: relative;
+        background-image: url("/static/img/icons/png-transparent-arrows-bottom-chevron-direction-move-navigation-up-mobile-basic-icon_blue.png");
+        width: 5%;
+        margin-left: 40%;
+        border: 4px solid blue;
+        z-index: 2;
+    }
+    #friends_block_title{
+        font-size: var(--font_size_main2);
+    }
+    #friends_block{
+        top:20%;
+        height: 80%;
+    }
+    .friend_fullname, .friend_course{
+        font-size: var(--font_size_main);
+        line-height: 120%;
+    }
+    #header_avatar{
+        display: block;
+        position: fixed;
+        left: 45vw;
+        top: 15px;
+        background-image: url(/static/img/user_avatar.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        z-index: 2;
+    }
+    #header_avatar::before{
+        content: "";
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        border-radius: 50%;
+        border: 3px solid #009aad;
+        z-index: 1;
+    }
+    #header_avatar::after{
+        content: "";
+        position: absolute;
+        background-color: #000;
+        top: -5px;
+        left: -5px;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        border: 10px solid #000;
+        z-index: 0;
+    }
+
+    header{
+        position: relative;
+        z-index: 3;
     }
 }

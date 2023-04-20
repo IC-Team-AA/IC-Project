@@ -246,12 +246,13 @@
 
 #ntf_text {
     position: relative;
-    font-size: max(var(--font_size_big), 14px);
+    font-size: max(var(--font_size_medium), 12px);
     width: 97%;
     height: 25%;
     font-weight: 600;
     z-index: 1;
-    font-family: 'Oswald', sans-serif;;
+    text-align: justify;
+    font-family: neatItalics, sans-serif;
     line-height: 1.3em
 }
 
@@ -751,6 +752,8 @@
     display: none;
 }
 #notific{
-    width: 100%;
-    height: 100%;
+    width: 30px;
+    height: 40%;
+    padding-right: 3%;
+    object-fit: fill;
 }

@@ -95,9 +95,14 @@ header {
     flex: initial
 }
 
+#header_avatar{
+    display: none;
+}
+
 #header_right {
     display: flex;
     height: 100%;
+    align-items: center;
     justify-content: right;
     flex: 1
 }
