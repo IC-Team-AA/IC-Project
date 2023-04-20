@@ -32,29 +32,29 @@
         grid-auto-flow: row;
         grid-template-areas: "progress progress" "lessons projects" "ntf records" "msg msg"
     }
-    .lessons_header, .projects_header, .ntf_header, .msg_header, .records_header{
+    #lessons_header,    #projects_header,   #ntf_header,   #msg_header,   #records_header{
         background-color: black;
         z-index: 1;
         border-radius: 10px 10px 0 0;
         border-bottom: 1px solid black;
     }
 
-    .lessons_header, .projects_header, .ntf_header{
+    #lessons_header,    #projects_header,   #ntf_header{
         justify-content: center;
     }
-    .lessons_header{
+    #lessons_header{
         height: 24%;
     }
-    .projects_header{
+    #projects_header{
         height: 24%;
     }
-    .ntf_header{
+    #ntf_header{
         height: 16.4%;
     }
-    .records_header{
+    #records_header{
         height: 16.4%;
     }
-    .msg_header{
+    #msg_header{
         height: 13%;
     }
     #ntf_wrapper{
@@ -69,10 +69,14 @@
     .records_header_title{
         width: 50%;
         justify-content: center;
+        padding: 0;
     }
     .msg_header_title{
         width: 33%;
         padding: 0;
+        justify-content: center;
+    }
+    .ntf_header_title, #lessons_header_block{
         justify-content: center;
     }
 
@@ -98,7 +102,7 @@
     #ntf_text{
         padding-bottom: 2%;
     }
-    .records_preheader{
+    #records_preheader{
         top:16%;
     }
     #records_logo{
@@ -126,6 +130,22 @@
     .records_content{
         top: 28%;
         height: 72%;
+    }
+    #areas_progress>::after {
+        width: max(4em, 10vw);
+        height: max(4em, 10vw);
+    }
+    #point_progress{
+        top: calc(40% + 5em);
+        height: 3vw;
+    }
+    #point_progress>::before{
+        width: 86%;
+        left: 7%;
+    }
+    #ntf_text{
+        font-size: max(var(--font_size_medium), 14px);
+        height: 22%;
     }
 }
 
@@ -165,13 +185,15 @@
         width: 100%;
     }
     #ntf_text {
-        font-size: max(calc(var(--font_size_medium) * var(--font_size_headers_multi)), 12px);
+        font-size: max(calc(var(--font_size_medium) * var(--font_size_headers_multi)), 11px);
+        padding: 0;
+        height: 25%;
     }
     .friend_avatar {
         width: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 35px);
         height: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 35px);
     }
-    .lessons_header_title, .msg_header_title, .projects_header_title,
+    #lessons_header_block, .msg_header_title, .projects_header_title,
     .ntf_header_title, .records_header_title, .records_preheader_title_60,
     .records_preheader_title {
         font-size: max(calc(var(--font_size_big) * var(--font_size_headers_multi)), 12px);
@@ -228,5 +250,325 @@
     }
     .lessons_text{
         display: none;
+    }
+    #point_progress{
+        top: min(12em, 12vh);
+        height: 4vw;
+    }
+    #point_progress>::before{
+        width: 86%;
+        left: 7%;
+    }
+    #result_progress{
+        left: 7vw;
+    }
+    #progress_main_title{
+        left: 22vw;
+    }
+    #friends_logo {
+        width: 2.2vh;
+        height: 1.8vh;
+        padding-left: 3%;
+    }
+}
+@media(max-width: 664px) {
+    #point_progress{
+        top: min(12em, 12vh);
+        height: 6vw;
+    }
+    #protected_projects_progress_text,
+    #failed_deadlines_progress_text{
+        width: 80px;
+        text-align: center;
+    }
+    #mark_progress_text,
+    #attendance_progress_text {
+        width: 60px;
+        text-align: center;
+    }
+}
+@media(max-width: 550px) {
+    #result_progress{
+        left: 5vw;
+    }
+    #progress_main_title{
+        left: 20vw;
+    }
+}
+@media(max-width: 500px) {
+    #point_progress{
+        top: min(11em, 12vh);
+        height: 7vw;
+    }
+}
+@media(max-width: 470px) {
+    #result_progress{
+        left: 4vw;
+    }
+    #progress_main_title{
+        left: 18vw;
+    }
+}
+@media(max-width: 450px) {
+    :root{
+        --IC_logo_width: 13vw;
+        --IC_logo_border_radius: min(2vh, 3vw);
+        --IC_logo_font_size: min(3vh, 5vw);
+        --top_progress_text: 47vw;
+        --font_size_main: 4vw;
+    }
+    #main_page{
+        height: 93vh;
+    }
+    nav, #IC_title, #chenge_lang{
+        display: none;
+    }
+    #main_content {
+        width: 100%;
+        height: 390%;
+        padding: 4%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 70fr 25fr 25fr 35fr 35fr 40fr;
+        gap: 3vw 4.5%;
+        grid-auto-flow: row;
+        grid-template-areas: "progress" "lessons" "projects" "ntf" "records" "msg"
+    }
+    #main_content>* {
+        background-position: none;
+        position: relative;
+        object-fit: inherit;
+        background-repeat: no-repeat;
+    }
+    
+    #main_content>div:not(#progress_mobile)>* {
+        position: absolute;
+    }
+    
+    #projects_mobile {
+        grid-area: projects;
+        position: relative;
+    }
+    
+    #msg_mobile {
+        grid-area: msg
+    }
+    
+    #progress_mobile {
+        grid-area: progress
+    }
+    
+    #ntf_mobile {
+        grid-area: ntf
+    }
+    
+    #lessons_mobile {
+        grid-area: lessons
+    }
+    
+    #records_mobile {
+        grid-area: records
+    }
+    #progress, #lessons, #msg, #ntf, #records, #projects{
+        display: none;
+    }
+    #progress_mobile, #lessons_mobile, #msg_mobile, #ntf_mobile, #records_mobile, #projects_mobile{
+        display: block;
+    }
+    #progress_mobile {
+        background-image: url(/static/img/progess_background.png);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-radius: 30px;
+    }
+    #progress_blocks{
+        width: 100%;
+        height: 90%;
+    }
+    #progress_block{
+        height: 25%;
+    }
+    #progress_title_wrapper{
+        width: 100%;
+        height: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #progress_title_wrapper>span{
+        font-weight: 700;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent
+    }
+
+    #progress_main_title, #result_progress{
+        left: auto;
+        top: auto;
+        text-align: center;
+        line-height: 120%;
+        font-size: 5vw;
+    }
+    #result_progress{
+        font-size: var(--font_size_main);
+    }
+    
+    
+    #areas_progress,
+    #point_progress {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center
+    }
+    #attendance_progress::after, #protected_projects_progress::after,
+    #failed_deadlines_progress::after, #mark_progress::after{
+        position: absolute;
+        content: "94%";
+        border-style: solid;
+        border-width: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 8vw;
+        left: 30vw;
+        border-radius: 50%;
+        width: 32vw;
+        height: 32vw;
+    }
+    #protected_projects_progress::after{
+        content: "27";
+    }
+    #failed_deadlines_progress::after{
+        content: "0";
+    }
+    #mark_progress::after{
+        content: "4.8";
+    }
+    #attendance_progress::before, #protected_projects_progress::before,
+    #failed_deadlines_progress::before, #mark_progress::before{
+        content: "Посещаемость";
+        position: absolute;
+        width: 60%;
+        height: 4%;
+        z-index: 1;
+        margin-top: 30%;
+        left: 18vw;
+        text-align: center;
+        display: flex;
+        font-size: var(--font_size_main);
+        flex-direction: column;
+        justify-content: center;
+        background-color: #000;
+        border: 2px solid;
+        border-radius: 8px;
+    }
+
+    #protected_projects_progress::before{
+        content: "Защищеных работ";
+    }
+    #failed_deadlines_progress::before{
+        content: "Слитых Deadline'ов";
+    }
+    #mark_progress::before{
+        content: "Общая оценка";
+    }
+    
+    #areas_progress>::after,
+    #point_progress>::before {
+        position: absolute;
+        content: "";
+        border-style: solid;
+        border-width: 2px
+    }
+    
+    #point_progress {
+        position: absolute;
+        font-size: max(calc(var(--font_size_extra_small) * var(--font_size_headers_multi)), 9px);
+        top: 65%;
+        left: 0;
+        height: 20%
+    }
+    
+    #point_progress>* {
+        width: 25%;
+        height: 50%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center
+    }
+    
+    #point_progress>::before {
+        left: 15%;
+        z-index: 0;
+        background-color: #000;
+        width: 70%;
+        height: 140%;
+        border-radius: 8px
+    }
+
+    #lessons_header, #projects_header, #ntf_header{
+        height: 14%;
+    }
+    #ntf_header, #records_header{
+        height: 10%;
+    }
+
+    #lessons_header_block, .projects_header_title, #ntf_header_block{
+        z-index: 1;
+        padding: 0;
+        font-size: var(--font_size_main);
+    }
+    .lessons_cards{
+        top: 14%;
+        height: 80%;
+        display: block;
+    }
+    #lessons_1_level{
+        width: 100%;
+        height: 45%;
+        margin-top: 2%;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .lessons_card, .lessons_card_active{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:var(--font_size_main);
+    }
+    #projects_wrapper, #projects_wrapper2{
+        top: 25%;
+        margin-top: 0;
+        justify-content: space-around;
+        height: 40%;
+    }
+    #projects_wrapper2{
+        top: 60%;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .projects_photo{
+        width: min(60px, 10vw);
+        height: min(80px, 15vw);
+    }
+    .projects_text{
+        font-size:var(--font_size_main);
+    }
+    #ntf_wrapper{
+        height: 80%;
+        bottom: 3%;
+    }
+    #ntf_text{
+        font-size: max(calc(var(--font_size_main) * 1.3), 20px);
+    }
+    .records_content{
+        
     }
 }

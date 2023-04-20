@@ -20,7 +20,7 @@
     /*размеры шрифтов*/
     --font_size_headers_multi: 1;
     --font_size_records_text_multi: 1;
-    --header_font_size: min(24px, 1.6vw, 3.2vh);
+    --font_size_progress_numbers: min(3vh, 2vw);
     --font_size_big: min(2.4vh, 1.4vw);
     --font_size_medium: min(2.2vh, 1.2vw);
     --font_size_little: min(2vh, 1vw);
@@ -91,7 +91,7 @@
     background-repeat: no-repeat;
 }
 
-#main_content>div:not(#progress)>* {
+#main_content>div:not(#progress, #progress_mobile)>* {
     position: absolute
 }
 
@@ -119,38 +119,38 @@
     grid-area: records
 }
 
-.msg_header, .projects_header, .records_header, .lessons_header, .ntf_header, .records_preheader{
+#msg_header, #projects_header, #records_header, #lessons_header, #ntf_header, #records_preheader{
     width: 100%;
     display: flex;
     align-items: center;
 }
 
-.lessons_header{
+#lessons_header{
     height: 30%;
 }
 
-.msg_header {
+#msg_header {
     height: 12%;
 }
 
-.projects_header {
+#projects_header {
     height: 27%;
 }
 
-.records_header {
+#records_header {
     height: 13%;
 }
 
-.ntf_header{
+#ntf_header{
     height: 13%;
 }
 
-.records_preheader{
+#records_preheader{
     height: 12%;
     top: 12%;
 }
 
-.lessons_header_title, .msg_header_title, .projects_header_title,
+#lessons_header_block, .msg_header_title, .projects_header_title,
 .ntf_header_title, .records_header_title, .records_preheader_title_60,
 .records_preheader_title {
     font-size: max(calc(var(--font_size_big) * var(--font_size_headers_multi)), 16px);
@@ -161,22 +161,22 @@
     align-items: center;
 }
 
-.lessons_header_title, .ntf_header_title{
+#lessons_header_block, .ntf_header_title{
     padding-left: 0.5em;
 }
 
 .msg_header_title {
-    width: 25%;
+    width: 26%;
     padding-left: 1.5%;
 }
 
 .projects_header_title {
-    width: 42%;
+    width: 45%;
     padding-left: 2.5%;
 }
 
 .records_header_title {
-    width: 30%;
+    width: 32%;
     padding-left: 3%;
 }
 
@@ -240,18 +240,19 @@
     width: 94%;
     height: 85%;
     bottom: 0;
+    align-items: center;
     right: 0
 }
 
 #ntf_text {
     position: relative;
-    font-size: max(var(--font_size_big), 16px);
-    width: 95%;
-    padding-bottom: 5%;
+    font-size: max(var(--font_size_big), 14px);
+    width: 97%;
+    height: 25%;
     font-weight: 600;
     z-index: 1;
     font-family: 'Oswald', sans-serif;;
-    line-height: 1.2em
+    line-height: 1.3em
 }
 
 #records_logo {
@@ -357,7 +358,7 @@
 
 #progress_main_title {
     top: 1.6vh;
-    font-size: calc(var(--font_size_medium) * var(--font_size_records_text_multi));
+    font-size: max(calc(var(--font_size_medium) * var(--font_size_records_text_multi)), 14px);
     left: 16%;
     background: linear-gradient(45deg, #009aad 33%, #2aabba 66%, #55bcc8)
 }
@@ -365,13 +366,13 @@
 #result_progress {
     top: 87%;
     left: 32%;
-    font-size: calc(var(--font_size_medium) * var(--font_size_headers_multi));
-    line-height: calc(var(--font_size_big) * var(--font_size_headers_multi));;
-    background: linear-gradient(45deg, #55bcc8 33%, #aadee3 66%, #fff)
+    font-size: max(calc(var(--font_size_little) * var(--font_size_records_text_multi)), 10px);
+    line-height: max(calc(var(--font_size_big) * var(--font_size_headers_multi)), 16px);
+    background: linear-gradient(45deg, #55bcc8 33%, #aadee3 66%, #fff);
 }
 
 #areas_progress,
-.point_progress {
+#point_progress {
     width: 100%;
     height: 100%;
     display: flex;
@@ -387,7 +388,7 @@
     font-style: normal;
     font-weight: 700;
     line-height: 22px;
-    font-size: 2em
+    font-size: calc(var(--font_size_progress_numbers) * var(--font_size_headers_multi));
 }
 
 #attendance_progress,
@@ -396,7 +397,7 @@
 }
 
 #areas_progress>::after,
-.point_progress>::before {
+#point_progress>::before {
     position: absolute;
     content: "";
     border-style: solid;
@@ -408,7 +409,7 @@
     left: -1em;
     border-radius: 50%;
     width: 4em;
-    height: 4em
+    height: 4em;
 }
 
 #protected_projects_progress,
@@ -426,19 +427,20 @@
     color: rgb(var(--color_progress_right_coef_red), var(--color_progress_right_coef_green), var(--color_progress_right_coef_blue))
 }
 
-.point_progress {
+#point_progress {
     position: absolute;
+    font-size: max(calc(var(--font_size_extra_small) * var(--font_size_headers_multi)), 9px);
     top: 65%;
     left: 0;
     height: 20%
 }
 
-.point_progress>*>span {
+#point_progress>*>span {
     position: absolute;
     z-index: 1
 }
 
-.point_progress>* {
+#point_progress>* {
     width: 25%;
     height: 50%;
     position: relative;
@@ -447,7 +449,7 @@
     align-items: center
 }
 
-.point_progress>::before {
+#point_progress>::before {
     left: 15%;
     z-index: 0;
     background-color: #000;
@@ -743,4 +745,12 @@
     font-weight: 700;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent
+}
+
+#progress_mobile, #ntf_mobile, #msg_mobile, #records_mobile, #lessons_mobile, #projects_mobile{
+    display: none;
+}
+#notific{
+    width: 100%;
+    height: 100%;
 }
