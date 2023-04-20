@@ -97,6 +97,7 @@ header {
 
 #header_right {
     display: flex;
+    height: 100%;
     justify-content: right;
     flex: 1
 }

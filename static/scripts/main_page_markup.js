@@ -101,15 +101,11 @@ function fixArtifacts(){
 }
 
 window.onload = function () {
-    setRelativeFont('#areas_progress > div', 'progress', 2);
-    setRelativeFont('#point_progress > div', 'point_progress', 1.5);
     chengeFormsPath();
     setFormSize();
 }
 
 window.onresize = function(){
-    setRelativeFont('#areas_progress > div', 'progress', 2);
-    setRelativeFont('#point_progress > div', 'point_progress', 1.5);
     chengeFormsPath();
     setFormSize();
     fixArtifacts();

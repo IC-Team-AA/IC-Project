@@ -28,7 +28,8 @@
         </div>
         <div id="header_right">
             <div id="header_right_content">
-                <a href="#">RU</a>
+                <img id="notific" src="/static/img/icons/notific_2.png" alt="">
+                <a id ="chenge_lang" href="#">RU</a>
                 <a id="exit_link" href="#">Выйти</a>
             </div>
         </div>
@@ -49,7 +50,7 @@
             <a href="#">Сертификаты</a>
             <a href="#">Настройки</a>
         </nav>
-        <section id="main_page" class="beautiful_scroll">
+        <section id="main_page">
             <div id="main_content">
                 <div id="progress">
                     <span id="progress_main_title">Прогресс за месяц</span>
@@ -59,18 +60,44 @@
                         <div id="failed_deadlines_progress">0</div>
                         <div id="mark_progress">4.8</div>
                     </div>
-                    <div class="point_progress" id="point_progress">
-                        <div id="attendance_progress_title"><span>Посещаемость</span></div>
-                        <div id="protected_projects_progress_title"><span>Защищеных работ</span></div>
-                        <div id="failed_deadlines_progress_title"><span>Слитых Deadline'ов</span></div>
-                        <div id="mark_progress_title"><span>Общая оценка</span></div>
+                    <div id="point_progress">
+                        <div id="attendance_progress_title"><span id="attendance_progress_text">Посеща<wbr>емость</span></div>
+                        <div id="protected_projects_progress_title"><span id="protected_projects_progress_text">Защищеных работ</span></div>
+                        <div id="failed_deadlines_progress_title"><span id="failed_deadlines_progress_text">Слитых Deadline'ов</span></div>
+                        <div id="mark_progress_title"><span id="mark_progress_text">Общая оценка</span></div>
                     </div>
                     <span id="result_progress">Отличный результат( лучше, чем у 90% учащихся )</span>
                 </div>
+                <div id="progress_mobile" class="widget">
+                    <div id="progress_title_wrapper">
+                        <span id="progress_main_title">Прогресс за месяц</span>
+                    </div>
+                    <div id="progress_blocks">
+                        <div id="progress_block">
+                            <div id="attendance_progress"></div>
+                            <div id="attendance_progress_title"></div>
+                        </div>
+                        <div id="progress_block">
+                            <div id="protected_projects_progress"></div>
+                            <div id="protected_projects_progress_title"></div>
+                        </div>
+                        <div id="progress_block">
+                            <div id="failed_deadlines_progress"></div>
+                            <div id="failed_deadlines_progress_title"></div>
+                        </div>
+                        <div id="progress_block">
+                            <div id="mark_progress"></div>
+                            <div id="mark_progress_title"></div>
+                        </div>
+                    </div>
+                    <div id="progress_title_wrapper">
+                        <span id="result_progress">Отличный результат( лучше, чем у 90% учащихся )</span>
+                    </div>
+                </div>
                 <div id="lessons" class="widget">
-                    <div id="lessons_header" class="lessons_header">
+                    <div id="lessons_header">
                         <div id="lessons_header_block">
-                            <span class="lessons_header_title">Ближайшие уроки</span>
+                            <span>Ближайшие уроки</span>
                         </div>
                     </div>
                     <div class="lessons_text" id="lessons_title">Python 30 матра 14:30</div>
@@ -85,8 +112,26 @@
                     </div>
                     <img id="lessons_bg" class="widget_form" src="/static/img/forms/lessons_bg-lg.png">
                 </div>
+                <div id="lessons_mobile" class="widget">
+                    <div id="lessons_header" class="lessons_header">
+                        <div id="lessons_header_block">
+                            <span>Ближайшие уроки</span>
+                        </div>
+                    </div>
+                    <div class="lessons_cards">
+                        <div id="lessons_1_level">
+                            <div class="lessons_card_active"><span>Python<br>30 матра<br>14:30</span></div>
+                            <div class="lessons_card"><span>web-дизайн<br>2 апреля</span></div>
+                        </div>
+                        <div id="lessons_1_level">
+                            <div class="lessons_card"><span>C++<br>2 апреля</span></div>
+                            <div class="lessons_card"><span>Java<wbr>Script<br>4 апреля</span></div>
+                        </div>
+                    </div>
+                    <img id="lessons_bg" class="widget_form" src="/static/img/forms/lessons_bg-lg.png">
+                </div>
                 <div id="projects" class="widget">
-                    <div id="projects_header" class="projects_header">
+                    <div id="projects_header">
                         <div class="projects_header_title"><span class="clickable">Ваши проекты</span></div> 
                         <div id='projects_header_right_block' class="projects_header_title no_active_title"><span class="clickable">Кодревью</span></div>
                     </div>
@@ -114,9 +159,40 @@
                     </div>
                     <img id="projects_bg" class="widget_form" src="/static/img/forms/projects_bg-lg.png">
                 </div>
+                <div id="projects_mobile" class="widget">
+                    <div id="projects_header">
+                        <div class="projects_header_title"><span class="clickable">Ваши проекты</span></div> 
+                        <div id='projects_header_right_block' class="projects_header_title no_active_title"><span class="clickable">Кодревью</span></div>
+                    </div>
+                    <div id="projects_wrapper">
+                        <div class="projects_block">
+                            <img class="projects_photo clickable" src="/static/img/projects/python.png">
+                            <p class="projects_text clickable">path_<wbr>creatop</p>
+                        </div>
+                        <div class="projects_block">
+                            <img class="projects_photo clickable" src="/static/img/projects/js.png">
+                            <p class="projects_text clickable">matrix</p>
+                        </div>
+                        <div class="projects_block">
+                            <img class="projects_photo clickable" src="/static/img/projects/html.png">
+                            <p class="projects_text clickable">index</p>
+                        </div>
+                    </div>
+                    <div id="projects_wrapper2">
+                        <div class="projects_block">
+                            <img class="projects_photo clickable" src="/static/img/projects/python.png">
+                            <p class="projects_text clickable">root_<wbr>finder</p>
+                        </div>
+                        <div class="projects_block">
+                            <img class="projects_photo clickable" src="/static/img/projects/ruby.png">
+                            <p class="projects_text clickable">project_1</p>
+                        </div>
+                    </div>
+                    <img id="projects_bg" class="widget_form" src="/static/img/forms/projects_bg-lg.png">
+                </div>
                 <div id="msg" class="widget">
-                    <div id="msg_header" class="msg_header">
-                        <div class="msg_header_title"><span class="clickable">Одногруппники</span></div>
+                    <div id="msg_header">
+                        <div class="msg_header_title"><span class="clickable">Одногрупп<wbr>ники</span></div>
                         <div class="msg_header_title no_active_title_cent"><span class="clickable">Преподаватели</span></div>
                         <div id="msg_title_form" class="msg_header_title no_active_title"><span class="clickable">Поддержка</span></div>
                     </div>
@@ -178,10 +254,31 @@
                     </div>
                     <img id="msg_bg" class="widget_form" src="/static/img/forms/msg_bg-lg.png">
                 </div>
+                <div id="msg_mobile" class="widget">
+                </div>
                 <div id="ntf" class="widget">
-                    <div id="ntf_header" class="ntf_header">
-                        <div id="ntf_header_block">
-                            <span class="ntf_header_title">Уведомления</span>
+                    <div id="ntf_header">
+                        <div id="ntf_header_block" class="ntf_header_title">
+                            <span>Уведомления</span>
+                        </div>
+                    </div>
+                    <div id="ntf_wrapper">
+                        <div id="ntf_text">
+                            · &nbsp&nbspЗавтра дедлайн по проекту: ”Автоматизация СУБД”.</div>
+                        <div id="ntf_text">
+                            · &nbsp&nbspВам задано новое домашнее задание: “Разработка макета сайта продуктового
+                            магазина”.</div>
+                        <div id="ntf_text">
+                            · &nbsp&nbspЧерез 4 дня кончается ваш абонимент по курсу “Python”.</div>
+                        <div id="ntf_text">
+                            · &nbsp&nbspTomorrow is the deadline for the project: ”DBMS automation".</div>
+                    </div>
+                    <img id="ntf_bg" class="widget_form" src="/static/img/forms/ntf_bg-lg.png">
+                </div>
+                <div id="ntf_mobile" class="widget">
+                    <div id="ntf_header">
+                        <div id="ntf_header_block" class="ntf_header_title">
+                            <span>Уведомления</span>
                         </div>
                     </div>
                     <div id="ntf_wrapper">
@@ -202,11 +299,46 @@
                         <div class="records_header_title"><span class="clickable">Записи</span></div>
                         <div id="records_header_right_block" class="records_header_title no_active_title"><span class="clickable">Доп.материалы</span></div>
                     </div>
-                    <div class="records_preheader">
+                    <div id="records_preheader">
                         <div class="records_preheader_title">
                             <img id="records_logo" src="/static/img/msg/records_logo.png" alt="">
                         </div>
                         <div class="records_preheader_title_60"><span>Описание</span></div>
+                    </div>
+                    <div class="records_content">
+                        <div class="records_video">
+                            <div class="video_photo">
+                                <img class="video_img clickable" src="/static/img/video1.jpg">
+                            </div>
+                            <div class="video_description">
+                                <div class="video_description_wrapper">
+                                    <div class="records_title"><span>C++ урок 16</span></div>
+                                    <div class="records_text"><span>Разбор логических операторов в
+                                        схемах.</span></div>
+                                    <div class="records_date"><span>28.03.2023</span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="records_video2">
+                            <div class="video_photo">
+                                <img class="video_img clickable" src="/static/img/video2.png">
+                            </div>
+                            <div class="video_description">
+                                <div class="video_description_wrapper">
+                                    <div class="records_title"><span>Python урок 21</span></div>
+                                    <div class="records_text"><span>Изучение модулей numpy и
+                                        tkinter и их использование.</span></div>
+                                    <div class="records_date"><span>28.03.2023</span></div>
+                                </div>
+                            </div>     
+                        </div>
+                    </div>
+                    <img id="records_bg" class="widget_form" src="/static/img/forms/records_bg-lg.png">
+                </div>
+                <div id="records_mobile" class="widget">
+                    <div id="records_header">
+                        <div class="records_header_title"><span class="clickable">Записи</span></div>
+                        <div id="records_header_right_block" class="records_header_title no_active_title"><span class="clickable">Доп.материалы</span></div>
                     </div>
                     <div class="records_content">
                         <div class="records_video">
