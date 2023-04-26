@@ -340,7 +340,7 @@
 }
 
 .projects_text {
-    font-size: max(calc(var(--font_size_extra_small) * var(--font_size_records_text_multi)), 11px);
+    font-size: max(calc(var(--font_size_extra_small) * var(--font_size_records_text_multi)), 10px);
     padding-top: 0.5vh
 }
 
@@ -507,8 +507,8 @@
     position: relative;
     top: 0.7em;
     left: 0.5em;
-    width: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 45px);
-    height: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 45px);
+    width: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)));
+    height: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)));
     border-radius: 50%;
     border: 3px solid white;
     transition: border-color 0.5s ease-in-out;
@@ -690,8 +690,8 @@
 }
 
 .friend_avatar {
-    width: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 50px);
-    height: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)), 50px);
+    width: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)));
+    height: max(calc(var(--size-friend-avatar) * var(--font_size_headers_multi)));
     background-color: #009aad;
     border-radius: 50%;
     position: relative;
